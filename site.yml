@@ -152,7 +152,7 @@
     tags: ['usr', 'prog', 'file', 'link']
 
   - name: link zotero desktop
-    file: src='~/bin/Zotero_linux-x86_64/zotero.desktop' dest='~/.local/share/proglications/zotero.desktop' state='link' force=yes
+    file: src='~/bin/Zotero_linux-x86_64/zotero.desktop' dest='~/.local/share/applications/zotero.desktop' state='link' force=yes
     tags: ['usr', 'prog', 'file', 'link']
 
 # }}}

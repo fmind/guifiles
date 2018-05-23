@@ -1,0 +1,158 @@
+---
+
+- hosts: localhost
+
+  tasks:
+
+# REPO {{{
+
+  - name: install fusion repo
+    dnf: name='{{item}}' disable_gpg_check=true
+    with_items:
+      - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_version}}.noarch.rpm
+      - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_version}}.noarch.rpm
+    tags: ['sys', 'repo', 'dnf', 'plug']
+    become: true
+
+# }}}
+
+# CODEC {{{
+
+  - name: install codecs
+    package: name='{{item}}'
+    with_items:
+      - gstreamer-ffmpeg
+      - gstreamer-plugins-bad
+      - gstreamer-plugins-bad-free-extras
+      - gstreamer-plugins-bad-nonfree
+      - gstreamer-plugins-ugly
+      - gstreamer1
+      - gstreamer1-libav
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-base
+      - gstreamer1-plugins-base-tools
+      - gstreamer1-plugins-good
+      - gstreamer1-plugins-good-extras
+      - gstreamer1-plugins-ugly
+      - p7zip
+      - p7zip-plugins
+    tags: ['sys', 'codec', 'pkg', 'plug']
+    become: true
+
+  - name: install dejavu-sans
+    package: name='dejavu-sans-mono-fonts'
+    tags: ['sys', 'prog', 'pkg', 'font']
+    become: true
+
+  - name: install powerline-fonts
+    package: name='powerline-fonts'
+    tags: ['sys', 'prog', 'pkg', 'plug']
+    become: true
+
+# }}}
+
+# GNOME {{{
+
+  - name: install gnome tweak tool
+    package: name='gnome-tweak-tool'
+    tags: ['sys', 'gnome', 'pkg', 'exec']
+    become: true
+
+  - name: install gnome chrome shell
+    package: name='chrome-gnome-shell'
+    tags: ['sys', 'gnome', 'pkg', 'plug']
+    become: true
+
+  - name: install gnome extensions
+    package: name='chrome-gnome-shell'
+    tags: ['sys', 'gnome', 'pkg', 'plug']
+    with_items:
+        - gnome-shell-extension-pomodoro
+        - gnome-shell-extension-openweather
+        - gnome-shell-extension-topicons-plus
+        - gnome-shell-extension-auto-move-windows
+        - gnome-shell-extension-do-not-disturb-button
+    become: true
+
+# }}}
+
+# PROGRAMS {{{
+
+  - name: install anki
+    package: name='{{item}}'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    with_items:
+        - anki
+        - dvipng
+    become: true
+
+  - name: install deja-dup
+    package: name='deja-dup-nautilus'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install firefox
+    package: name='firefox'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install gimp
+    package: name='gimp'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install keepassx
+    package: name='keepassx'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install nextcloud
+    package: name='nextcloud-client-nautilus'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install tlp
+    package: name='tlp'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install transmission
+    package: name='gimp'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install unison
+    package: name='unison240-gtk'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install vlc
+    package: name='vlc'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install xbacklight
+    package: name='xbacklight'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: install xsel
+    package: name='xsel'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    become: true
+
+  - name: download zotero
+    unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='~/bin/' remote_src=yes
+    tags: ['usr', 'prog', 'zip', 'exec']
+
+  - name: link zotero exec
+    file: src='~/bin/Zotero_linux-x86_64/zotero' dest='~/bin/zotero' state='link' force=yes
+    tags: ['usr', 'prog', 'file', 'link']
+
+  - name: link zotero desktop
+    file: src='~/bin/Zotero_linux-x86_64/zotero.desktop' dest='~/.local/share/proglications/zotero.desktop' state='link' force=yes
+    tags: ['usr', 'prog', 'file', 'link']
+
+# }}}

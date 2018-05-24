@@ -143,8 +143,9 @@
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
-  - name: create zotero dir
-    file: path='~/bin' state='directory'
+  - name: create bin dir
+    file: path='~/bin/' state='directory'
+    tags: ['usr', 'prog', 'file', 'dir']
 
   - name: download zotero
     unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='~/bin/' remote_src=yes

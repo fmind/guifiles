@@ -18,13 +18,12 @@ before_install:
     - docker run --name ${DIST}-tests --rm -dt ${DIST}:${TAG} ${SHELL}
 
 install:
-    - docker exec ${DIST}-tests ${PKG} install -y ansible
+    - docker exec ${DIST}-tests ${PKG} install -y git ansible
 
 before_script:
     - docker cp . ${DIST}-tests:/repo
 
 script:
-    - docker exec ${DIST}-tests ansible-galaxy install -ifr /repo/role.yml
     - docker exec ${DIST}-tests ansible-playbook -i 'localhost,' -c local --tag usr /repo/site.yml
 
 after_script:

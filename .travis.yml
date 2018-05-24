@@ -22,6 +22,7 @@ install:
 
 before_script:
     - docker cp . ${DIST}-tests:/repo
+    - docker exec ${DIST}-tests export PATH="~/.local/bin:$PATH"
 
 script:
     - docker exec ${DIST}-tests ansible-playbook -i 'localhost,' -c local --tag usr /repo/site.yml

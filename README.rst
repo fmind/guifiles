@@ -1,7 +1,7 @@
 fedfiles
 ========
 
-Dotfiles for the fedora distribution.
+Dotfiles for the fedora/gnome distribution.
 
 Requirements
 ------------

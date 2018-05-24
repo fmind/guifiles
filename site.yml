@@ -41,6 +41,11 @@
     tags: ['sys', 'codec', 'pkg', 'plug']
     become: true
 
+  - name: install spelling
+    package: name='hunspell-fr'
+    tags: ['sys', 'prog', 'pkg', 'spell']
+    become: true
+
   - name: install dejavu-sans
     package: name='dejavu-sans-mono-fonts'
     tags: ['sys', 'prog', 'pkg', 'font']
@@ -143,20 +148,19 @@
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
-  - name: create bin dir
-    file: path='~/bin/' state='directory'
-    tags: ['usr', 'prog', 'file', 'dir']
-
   - name: download zotero
-    unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='~/bin/' remote_src=yes
-    tags: ['usr', 'prog', 'zip', 'exec']
+    unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='/opt/' remote_src=yes
+    tags: ['sys', 'prog', 'zip', 'exec']
+    become: true
 
   - name: link zotero exec
-    file: src='~/bin/Zotero_linux-x86_64/zotero' dest='~/bin/zotero' state='link' force=yes
-    tags: ['usr', 'prog', 'file', 'link']
+    file: src='/opt/Zotero_linux-x86_64/zotero' dest='/usr/local/bin/zotero' state='link' force=yes
+    tags: ['sys', 'prog', 'file', 'link']
+    become: true
 
   - name: link zotero desktop
-    file: src='~/bin/Zotero_linux-x86_64/zotero.desktop' dest='~/.local/share/applications/zotero.desktop' state='link' force=yes
-    tags: ['usr', 'prog', 'file', 'link']
+    file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/local/share/applications/zotero.desktop' state='link' force=yes
+    tags: ['sys', 'prog', 'file', 'link']
+    become: true
 
 # }}}

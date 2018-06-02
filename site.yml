@@ -81,10 +81,10 @@
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
-  - name: install nextcloud
-    package: name='nautilus-owncloud'
-    tags: ['sys', 'prog', 'pkg', 'exec']
-    become: true
+  # - name: install nextcloud
+  #   package: name='nautilus-owncloud'
+  #   tags: ['sys', 'prog', 'pkg', 'exec']
+  #   become: true
 
   - name: install tlp
     package: name='tlp'

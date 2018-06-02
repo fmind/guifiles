@@ -41,7 +41,6 @@
     tags: ['sys', 'gnome', 'pkg', 'plug']
     with_items:
         # pomodoro
-        # alternate tab
         # do not disturb
         # drop down terminal
         - gnome-shell-extension-pixelsaver

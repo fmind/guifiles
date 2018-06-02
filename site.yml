@@ -6,53 +6,19 @@
 
 # REPO {{{
 
-  - name: install fusion repo
-    dnf: name='{{item}}' disable_gpg_check=true
-    with_items:
-      - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_version}}.noarch.rpm
-      - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_version}}.noarch.rpm
-    tags: ['sys', 'repo', 'dnf', 'plug']
-    become: true
-
 # }}}
+ 
+# LANG {{{
+
+  - name: install french lang
+    package: name='hunspell-fr'
+    tags: ['sys', 'prog', 'pkg', 'plug']
+    become: true
 
 # CODEC {{{
 
-  - name: install codecs
-    package: name='{{item}}'
-    with_items:
-      - gstreamer-ffmpeg
-      - gstreamer-plugins-bad
-      - gstreamer-plugins-bad-free-extras
-      - gstreamer-plugins-bad-nonfree
-      - gstreamer-plugins-ugly
-      - gstreamer1
-      - gstreamer1-libav
-      - gstreamer1-plugins-bad-free
-      - gstreamer1-plugins-bad-free-extras
-      - gstreamer1-plugins-bad-freeworld
-      - gstreamer1-plugins-base
-      - gstreamer1-plugins-base-tools
-      - gstreamer1-plugins-good
-      - gstreamer1-plugins-good-extras
-      - gstreamer1-plugins-ugly
-      - p7zip
-      - p7zip-plugins
-    tags: ['sys', 'codec', 'pkg', 'plug']
-    become: true
-
-  - name: install spelling
-    package: name='hunspell-fr'
-    tags: ['sys', 'prog', 'pkg', 'spell']
-    become: true
-
-  - name: install dejavu-sans
-    package: name='dejavu-sans-mono-fonts'
-    tags: ['sys', 'prog', 'pkg', 'font']
-    become: true
-
-  - name: install powerline-fonts
-    package: name='powerline-fonts'
+  - name: install powerline fonts
+    package: name='fonts-powerline'
     tags: ['sys', 'prog', 'pkg', 'plug']
     become: true
 
@@ -74,11 +40,14 @@
     package: name='chrome-gnome-shell'
     tags: ['sys', 'gnome', 'pkg', 'plug']
     with_items:
-        - gnome-shell-extension-pomodoro
-        - gnome-shell-extension-openweather
-        - gnome-shell-extension-topicons-plus
-        - gnome-shell-extension-auto-move-windows
-        - gnome-shell-extension-do-not-disturb-button
+        # pomodoro
+        # alternate tab
+        # do not disturb
+        # drop down terminal
+        - gnome-shell-extension-pixelsaver
+        - gnome-shell-extension-impactience
+        - gnome-shell-extension-no-annoyance
+        - gnome-shell-extension-top-icons-plus
     become: true
 
 # }}}
@@ -94,7 +63,7 @@
     become: true
 
   - name: install deja-dup
-    package: name='deja-dup-nautilus'
+    package: name='deja-dup'
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
@@ -114,7 +83,7 @@
     become: true
 
   - name: install nextcloud
-    package: name='nextcloud-client-nautilus'
+    package: name='nautilus-owncloud'
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
@@ -123,13 +92,8 @@
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
-  - name: install transmission
-    package: name='gimp'
-    tags: ['sys', 'prog', 'pkg', 'exec']
-    become: true
-
   - name: install unison
-    package: name='unison240-gtk'
+    package: name='unison-gtk'
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
@@ -159,7 +123,7 @@
     become: true
 
   - name: link zotero desktop
-    file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/local/share/applications/zotero.desktop' state='link' force=yes
+    file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
     tags: ['sys', 'prog', 'file', 'link']
     become: true
 

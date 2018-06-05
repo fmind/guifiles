@@ -4,28 +4,21 @@
 
   tasks:
 
-# REPO {{{
-
-# }}}
- 
-# LANG {{{
-
+#REPO{{{
+#}}}
+#LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
     tags: ['sys', 'prog', 'pkg', 'plug']
     become: true
-
-# CODEC {{{
-
+#}}}
+#CODEC{{{
   - name: install powerline fonts
     package: name='fonts-powerline'
     tags: ['sys', 'prog', 'pkg', 'plug']
     become: true
-
-# }}}
-
-# GNOME {{{
-
+#}}}
+#GNOME{{{
   - name: install gnome tweak tool
     package: name='gnome-tweak-tool'
     tags: ['sys', 'gnome', 'pkg', 'exec']
@@ -40,19 +33,16 @@
     package: name='chrome-gnome-shell'
     tags: ['sys', 'gnome', 'pkg', 'plug']
     with_items:
-        # pomodoro
-        # do not disturb
-        # drop down terminal
+       #pomodoro
+       #do not disturb
+       #drop down terminal
         - gnome-shell-extension-pixelsaver
         - gnome-shell-extension-impactience
         - gnome-shell-extension-no-annoyance
         - gnome-shell-extension-top-icons-plus
     become: true
-
-# }}}
-
-# PROGRAMS {{{
-
+#}}}
+#PROGRAMS{{{
   - name: install anki
     package: name='{{item}}'
     tags: ['sys', 'prog', 'pkg', 'exec']
@@ -80,11 +70,6 @@
     package: name='keepassx'
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
-
-  # - name: install nextcloud
-  #   package: name='nautilus-owncloud'
-  #   tags: ['sys', 'prog', 'pkg', 'exec']
-  #   become: true
 
   - name: install tlp
     package: name='tlp'
@@ -125,5 +110,4 @@
     file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
     tags: ['sys', 'prog', 'file', 'link']
     become: true
-
-# }}}
+#}}}

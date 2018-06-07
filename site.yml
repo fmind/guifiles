@@ -96,6 +96,14 @@
     tags: ['sys', 'prog', 'pkg', 'exec']
     become: true
 
+  - name: install owncloud
+    package: name='{{item}}'
+    tags: ['sys', 'prog', 'pkg', 'exec']
+    with_items:
+      - owncloud-client
+      - libgnome-keyring0
+    become: true
+
   - name: download zotero
     unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='/opt/' remote_src=yes
     tags: ['sys', 'prog', 'zip', 'exec']

@@ -9,29 +9,29 @@
 #LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
-    tags: ['sys', 'prog', 'pkg', 'plug']
+    tags: ['sys', 'lang']
     become: true
 #}}}
 #CODEC{{{
   - name: install powerline fonts
     package: name='fonts-powerline'
-    tags: ['sys', 'prog', 'pkg', 'plug']
+    tags: ['sys', 'codec']
     become: true
 #}}}
 #GNOME{{{
   - name: install gnome tweak tool
     package: name='gnome-tweak-tool'
-    tags: ['sys', 'gnome', 'pkg', 'exec']
+    tags: ['sys', 'gnome']
     become: true
 
   - name: install gnome chrome shell
     package: name='chrome-gnome-shell'
-    tags: ['sys', 'gnome', 'pkg', 'plug']
+    tags: ['sys', 'gnome']
     become: true
 
   - name: install gnome extensions
     package: name='chrome-gnome-shell'
-    tags: ['sys', 'gnome', 'pkg', 'plug']
+    tags: ['sys', 'gnome']
     with_items:
        #pomodoro
        #do not disturb
@@ -42,10 +42,10 @@
         - gnome-shell-extension-top-icons-plus
     become: true
 #}}}
-#PROGRAMS{{{
+#APPLICATIONS{{{
   - name: install anki
     package: name='{{item}}'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     with_items:
         - anki
         - dvipng
@@ -53,52 +53,52 @@
 
   - name: install deja-dup
     package: name='deja-dup'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install firefox
     package: name='firefox'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install gimp
     package: name='gimp'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install keepassx
     package: name='keepassx'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install tlp
     package: name='tlp'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install unison
     package: name='unison-gtk'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install vlc
     package: name='vlc'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install xbacklight
     package: name='xbacklight'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install xsel
     package: name='xsel'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: install owncloud
     package: name='{{item}}'
-    tags: ['sys', 'prog', 'pkg', 'exec']
+    tags: ['sys', 'app']
     with_items:
       - owncloud-client
       - libgnome-keyring0
@@ -106,16 +106,16 @@
 
   - name: download zotero
     unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='/opt/' remote_src=yes
-    tags: ['sys', 'prog', 'zip', 'exec']
+    tags: ['sys', 'app']
     become: true
 
   - name: link zotero exec
     file: src='/opt/Zotero_linux-x86_64/zotero' dest='/usr/local/bin/zotero' state='link' force=yes
-    tags: ['sys', 'prog', 'file', 'link']
+    tags: ['sys', 'app']
     become: true
 
   - name: link zotero desktop
     file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
-    tags: ['sys', 'prog', 'file', 'link']
+    tags: ['sys', 'app']
     become: true
 #}}}

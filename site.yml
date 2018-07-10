@@ -4,21 +4,21 @@
 
   tasks:
 
-#REPO{{{
-#}}}
-#LANG{{{
+# REPO{{{
+# }}}
+# LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
     tags: ['sys', 'lang']
     become: true
-#}}}
-#CODEC{{{
+# }}}
+# CODEC{{{
   - name: install powerline fonts
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
     become: true
-#}}}
-#GNOME{{{
+# }}}
+# GNOME{{{
   - name: install gnome tweak tool
     package: name='gnome-tweak-tool'
     tags: ['sys', 'gnome']
@@ -33,16 +33,16 @@
     package: name='chrome-gnome-shell'
     tags: ['sys', 'gnome']
     with_items:
-       #pomodoro
-       #do not disturb
-       #drop down terminal
+       # pomodoro
+       # do not disturb
+       # drop down terminal
         - gnome-shell-extension-pixelsaver
         - gnome-shell-extension-impactience
         - gnome-shell-extension-no-annoyance
         - gnome-shell-extension-top-icons-plus
     become: true
-#}}}
-#APPLICATIONS{{{
+# }}}
+# APPLICATIONS{{{
   - name: install anki
     package: name='{{item}}'
     tags: ['sys', 'app']
@@ -118,4 +118,4 @@
     file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
     tags: ['sys', 'app']
     become: true
-#}}}
+# }}}

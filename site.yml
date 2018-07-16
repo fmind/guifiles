@@ -4,21 +4,19 @@
 
   tasks:
 
-#REPO{{{
-#}}}
-#LANG{{{
+# LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
     tags: ['sys', 'lang']
     become: true
-#}}}
-#CODEC{{{
+# }}}
+# CODEC{{{
   - name: install powerline fonts
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
     become: true
-#}}}
-#GNOME{{{
+# }}}
+# GNOME{{{
   - name: install gnome tweak tool
     package: name='gnome-tweak-tool'
     tags: ['sys', 'gnome']
@@ -33,16 +31,13 @@
     package: name='chrome-gnome-shell'
     tags: ['sys', 'gnome']
     with_items:
-       #pomodoro
-       #do not disturb
-       #drop down terminal
         - gnome-shell-extension-pixelsaver
         - gnome-shell-extension-impactience
         - gnome-shell-extension-no-annoyance
         - gnome-shell-extension-top-icons-plus
     become: true
-#}}}
-#APPLICATIONS{{{
+# }}}
+# APPLICATIONS{{{
   - name: install anki
     package: name='{{item}}'
     tags: ['sys', 'app']
@@ -71,6 +66,14 @@
     tags: ['sys', 'app']
     become: true
 
+  - name: install owncloud
+    package: name='{{item}}'
+    tags: ['sys', 'app']
+    with_items:
+      - owncloud-client
+      - libgnome-keyring0
+    become: true
+
   - name: install tlp
     package: name='tlp'
     tags: ['sys', 'app']
@@ -96,14 +99,6 @@
     tags: ['sys', 'app']
     become: true
 
-  - name: install owncloud
-    package: name='{{item}}'
-    tags: ['sys', 'app']
-    with_items:
-      - owncloud-client
-      - libgnome-keyring0
-    become: true
-
   - name: download zotero
     unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='/opt/' remote_src=yes
     tags: ['sys', 'app']
@@ -118,4 +113,4 @@
     file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
     tags: ['sys', 'app']
     become: true
-#}}}
+# }}}

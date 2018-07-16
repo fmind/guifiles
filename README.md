@@ -1,6 +1,6 @@
-# fedfiles
+# guifiles
 
-Dotfiles for the fedora/gnome distribution.
+Dotfiles for the ubuntu/gnome distribution.
 
 ## Requirements
 

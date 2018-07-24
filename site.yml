@@ -46,8 +46,23 @@
         - dvipng
     become: true
 
+  - name: install boxes
+    package: name='gnome-boxes'
+    tags: ['sys', 'app']
+    become: true
+
   - name: install deja-dup
     package: name='deja-dup'
+    tags: ['sys', 'app']
+    become: true
+
+  - name: install empathy
+    package: name='empathy'
+    tags: ['sys', 'app']
+    become: true
+
+  - name: install evolution
+    package: name='evolution'
     tags: ['sys', 'app']
     become: true
 

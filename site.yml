@@ -99,6 +99,11 @@
     tags: ['sys', 'app']
     become: true
 
+  - name: install vimx
+    package: name='vim-gtk3'
+    tags: ['sys', 'app']
+    become: true
+
   - name: install vlc
     package: name='vlc'
     tags: ['sys', 'app']

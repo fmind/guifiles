@@ -57,7 +57,10 @@
     become: true
 
   - name: install empathy
-    package: name='empathy'
+    package: name='{{item}}'
+    with_items:
+      - empathy
+      - telepathy-idle 
     tags: ['sys', 'app']
     become: true
 

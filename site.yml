@@ -79,6 +79,11 @@
     tags: ['sys', 'app']
     become: true
 
+  - name: install kazam
+    package: name='kazam'
+    tags: ['sys', 'app']
+    become: true
+
   - name: install keepassx
     package: name='keepassx'
     tags: ['sys', 'app']

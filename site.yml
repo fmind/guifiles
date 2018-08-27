@@ -37,6 +37,17 @@
         - gnome-shell-extension-top-icons-plus
     become: true
 # }}}
+# AUTOMATION{{{
+  - name: install mouse automation
+    pip: name='mouse' executable='pip3' extra_args='--user'
+    tags: ['usr', 'automation']
+
+  - name: deploy mouse automation scripts
+    file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
+    tags: ['usr', 'automation']
+    with_fileglob:
+      - 'mouse/*'
+# }}}
 # APPLICATIONS{{{
   - name: install anki
     package: name='{{item}}'

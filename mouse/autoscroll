@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import time
+import mouse
+
+while True:
+    mouse.wheel(1)
+    time.sleep(1)

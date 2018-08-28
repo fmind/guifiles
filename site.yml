@@ -4,6 +4,15 @@
 
   tasks:
 
+# INIT{{{
+  - name: install pip
+    package: name='python3-pip'
+    tags: ['sys', 'init']
+
+  - name: create ~/bin
+    file: name='~/bin' state='directory'
+    tags: ['usr', 'init']
+# }}}
 # LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
@@ -15,7 +24,7 @@
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
     become: true
-# }}}
+# 10}}}
 # GNOME{{{
   - name: install gnome tweak tool
     package: name='gnome-tweak-tool'
@@ -37,16 +46,25 @@
         - gnome-shell-extension-top-icons-plus
     become: true
 # }}}
-# AUTOMATION{{{
-  - name: install mouse automation
+# AUTOMATION{10{{
+  - name: install autogui
     pip: name='mouse' executable='pip3' extra_args='--user'
     tags: ['usr', 'automation']
 
-  - name: deploy mouse automation scripts
+  - name: install autogui deps
+    package: name='{{item}}'
+    with_items:
+      - scrot
+      - python3-tk
+      - python3-dev
+      - python3-xlib
+    tags: ['sys', 'automation']
+
+  - name: deploy autogui scripts
     file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
     tags: ['usr', 'automation']
     with_fileglob:
-      - 'mouse/*'
+      - 'autogui/*'
 # }}}
 # APPLICATIONS{{{
   - name: install anki

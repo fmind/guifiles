@@ -16,27 +16,6 @@
     tags: ['sys', 'codec']
     become: true
 # }}}
-# GNOME{{{
-  - name: install gnome tweak tool
-    package: name='gnome-tweak-tool'
-    tags: ['sys', 'gnome']
-    become: true
-
-  - name: install gnome chrome shell
-    package: name='chrome-gnome-shell'
-    tags: ['sys', 'gnome']
-    become: true
-
-  - name: install gnome extensions
-    package: name='chrome-gnome-shell'
-    tags: ['sys', 'gnome']
-    with_items:
-        - gnome-shell-extension-pixelsaver
-        - gnome-shell-extension-impactience
-        - gnome-shell-extension-no-annoyance
-        - gnome-shell-extension-top-icons-plus
-    become: true
-# }}}
 # APPLICATIONS{{{
   - name: install anki
     package: name='{{item}}'
@@ -46,33 +25,13 @@
         - dvipng
     become: true
 
-  - name: install boxes
-    package: name='gnome-boxes'
-    tags: ['sys', 'app']
-    become: true
-
   - name: install deja-dup
     package: name='deja-dup'
     tags: ['sys', 'app']
     become: true
 
-  - name: install empathy
-    package: name='empathy'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install evolution
-    package: name='evolution'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install firefox
-    package: name='firefox'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install gimp
-    package: name='gimp'
+  - name: install krita
+    package: name='krita'
     tags: ['sys', 'app']
     become: true
 
@@ -86,7 +45,7 @@
     tags: ['sys', 'app']
     with_items:
       - owncloud-client
-      - libgnome-keyring0
+      - dolphin-owncloud
     become: true
 
   - name: install tlp
@@ -119,18 +78,8 @@
     tags: ['sys', 'app']
     become: true
 
-  - name: download zotero
-    unarchive: src='https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.44' dest='/opt/' remote_src=yes
-    tags: ['sys', 'app']
-    become: true
-
-  - name: link zotero exec
-    file: src='/opt/Zotero_linux-x86_64/zotero' dest='/usr/local/bin/zotero' state='link' force=yes
-    tags: ['sys', 'app']
-    become: true
-
-  - name: link zotero desktop
-    file: src='/opt/Zotero_linux-x86_64/zotero.desktop' dest='/usr/share/applications/zotero.desktop' state='link' force=yes
+  - name: install yakuake
+    package: name='yakuake'
     tags: ['sys', 'app']
     become: true
 # }}}

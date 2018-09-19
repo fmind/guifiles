@@ -4,6 +4,15 @@
 
   tasks:
 
+# INIT{{{
+  - name: install pip
+    package: name='python3-pip'
+    tags: ['sys', 'init']
+
+  - name: create ~/bin
+    file: name='~/bin' state='directory'
+    tags: ['usr', 'init']
+# }}}
 # LANG{{{
   - name: install french lang
     package: name='hunspell-fr'
@@ -15,6 +24,46 @@
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
     become: true
+# AUTOMATION{{{
+  - name: install autogui
+    pip: name='pyautogui' executable='pip3' extra_args='--user'
+    tags: ['usr', 'automation']
+
+  - name: install autogui deps
+    package: name='{{item}}'
+    with_items:
+      - scrot
+      - python3-tk
+      - python3-dev
+      - python3-xlib
+    tags: ['sys', 'automation']
+    become: true
+
+  - name: deploy autogui scripts
+    file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
+    tags: ['usr', 'automation']
+    with_fileglob:
+      - 'autogui/*'
+
+  - name: install splinter
+    pip: name='splinter' executable='pip3' extra_args='--user'
+    tags: ['usr', 'automation']
+
+  - name: install splinter deps
+    pip: name='{{item}}' executable='pip3' extra_args='--user'
+    with_items:
+      - selenium
+    tags: ['usr', 'automation']
+
+  - name: install splinter drivers
+    unarchive: src='https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux64.tar.gz' dest='~/bin/' remote_src=yes
+    tags: ['usr', 'automation']
+
+  - name: deploy splinter scripts
+    file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
+    tags: ['usr', 'automation']
+    with_fileglob:
+      - 'splinter/*'
 # }}}
 # APPLICATIONS{{{
   - name: install anki
@@ -32,6 +81,11 @@
 
   - name: install krita
     package: name='krita'
+    tags: ['sys', 'app']
+    become: true
+
+  - name: install kazam
+    package: name='kazam'
     tags: ['sys', 'app']
     become: true
 

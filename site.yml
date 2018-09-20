@@ -79,6 +79,15 @@
     tags: ['sys', 'app']
     become: true
 
+  - name: install firefox
+    package: name='{{item}}'
+    tags: ['sys', 'app']
+    with_items:
+      - firefox
+      - firefox-locale-en
+      - firefox-locale-fr
+    become: true
+
   - name: install krita
     package: name='krita'
     tags: ['sys', 'app']
@@ -105,6 +114,17 @@
   - name: install tlp
     package: name='tlp'
     tags: ['sys', 'app']
+    become: true
+
+  - name: install thunderbird
+    package: name='{{item}}'
+    tags: ['sys', 'app']
+    with_items:
+      - enigmail
+      - thunderbird
+      - xul-ext-lightning
+      - thunderbird-locale-en
+      - thunderbird-locale-fr
     become: true
 
   - name: install unison

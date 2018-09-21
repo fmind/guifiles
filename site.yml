@@ -4,7 +4,7 @@
 
   tasks:
 
-# INIT{{{
+# INIT {{{
   - name: install pip
     package: name='python3-pip'
     tags: ['sys', 'init']
@@ -13,18 +13,21 @@
     file: name='~/bin' state='directory'
     tags: ['usr', 'init']
 # }}}
-# LANG{{{
+# LANG {{{
   - name: install french lang
     package: name='hunspell-fr'
     tags: ['sys', 'lang']
     become: true
 # }}}
-# CODEC{{{
+# KDE {{{
+# }}}
+# CODEC {{{
   - name: install powerline fonts
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
     become: true
-# AUTOMATION{{{
+# }}}
+# AUTOMATION {{{
   - name: install autogui
     pip: name='pyautogui' executable='pip3' extra_args='--user'
     tags: ['usr', 'automation']
@@ -65,7 +68,7 @@
     with_fileglob:
       - 'splinter/*'
 # }}}
-# APPLICATIONS{{{
+# APPLICATIONS {{{
   - name: install anki
     package: name='{{item}}'
     tags: ['sys', 'app']

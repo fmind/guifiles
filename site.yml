@@ -5,7 +5,7 @@
   tasks:
 
 # INIT {{{
-  - name: install pip
+  - name: install pip3
     package: name='python3-pip'
     tags: ['sys', 'init']
 
@@ -22,6 +22,11 @@
 # KDE {{{
 # }}}
 # CODEC {{{
+  - name: install emoji fonts
+    package: name='fonts-emojione'
+    tags: ['sys', 'codec']
+    become: true
+
   - name: install powerline fonts
     package: name='fonts-powerline'
     tags: ['sys', 'codec']
@@ -101,7 +106,7 @@
     tags: ['sys', 'app']
     become: true
 
-  - name: install kup
+  - name: install kup backup
     package: name='kup-backup'
     tags: ['sys', 'app']
     become: true

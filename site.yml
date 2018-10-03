@@ -77,11 +77,6 @@
         - dvipng
     become: true
 
-  - name: install deja-dup
-    package: name='deja-dup'
-    tags: ['sys', 'app']
-    become: true
-
   - name: install firefox
     package: name='{{item}}'
     tags: ['sys', 'app']
@@ -103,6 +98,11 @@
 
   - name: install keepassx
     package: name='keepassx'
+    tags: ['sys', 'app']
+    become: true
+
+  - name: install kup
+    package: name='kup-backup'
     tags: ['sys', 'app']
     become: true
 

@@ -125,14 +125,14 @@
     tags: ['sys', 'app']
     become: true
 
-  # - name: install firefox
-  #   package: name='{{item}}'
-  #   tags: ['sys', 'app']
-  #   with_items:
-  #     - firefox
-  #     - firefox-locale-en
-  #     - firefox-locale-fr
-  #   become: true
+  - name: install firefox
+    package: name='{{item}}'
+    tags: ['sys', 'app']
+    with_items:
+      - firefox
+      - firefox-locale-en
+      - firefox-locale-fr
+    become: true
 
   - name: install empathy
     package: name='empathy'
@@ -149,11 +149,6 @@
     tags: ['sys', 'app']
     become: true
 
-  # - name: install kazam
-  #   package: name='kazam'
-  #   tags: ['sys', 'app']
-  #   become: true
-
   - name: install keepassx
     package: name='keepassx'
     tags: ['sys', 'app']
@@ -166,10 +161,4 @@
       - libgnome-keyring0
       - nautilus-owncloud
     become: true
-
-  - name: install tlp
-    package: name='tlp'
-    tags: ['sys', 'app']
-    become: true
-
 # }}}

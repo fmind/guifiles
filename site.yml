@@ -19,7 +19,29 @@
     tags: ['sys', 'lang']
     become: true
 # }}}
-# KDE {{{
+# GNOME{{{
+  - name: install gnome tweak
+    package: name='gnome-tweak-tool'
+    tags: ['sys', 'gnome']
+    become: true
+
+  - name: install gnome chrome
+    package: name='chrome-gnome-shell'
+    tags: ['sys', 'gnome']
+    become: true
+
+  - name: install gnome extensions
+    package: name='chrome-gnome-shell'
+    tags: ['sys', 'gnome']
+    with_items:
+      - gnome-shell-extension-weather
+      - gnome-shell-extension-pixelsaver
+      - gnome-shell-extension-impactience
+      - gnome-shell-extension-no-annoyance
+      - gnome-shell-extension-top-icons-plus
+      - gnome-shell-extension-system-monitor
+      - gnome-shell-extension-tilix-dropdown
+    become: true
 # }}}
 # CODEC {{{
   - name: install emoji fonts
@@ -73,46 +95,67 @@
     with_fileglob:
       - 'splinter/*'
 # }}}
+# EXTENSIONS {{{
+  - name: install vimx
+    package: name='vim-gtk3'
+    tags: ['sys', 'ext']
+    become: true
+
+  - name: install xsel
+    package: name='xsel'
+    tags: ['sys', 'ext']
+    become: true
+
+  - name: install xbacklight
+    package: name='xbacklight'
+    tags: ['sys', 'ext']
+    become: true
+# }}}
 # APPLICATIONS {{{
   - name: install anki
     package: name='{{item}}'
     tags: ['sys', 'app']
     with_items:
-        - anki
-        - dvipng
+      - anki
+      - dvipng
     become: true
 
-  - name: install firefox
-    package: name='{{item}}'
-    tags: ['sys', 'app']
-    with_items:
-      - firefox
-      - firefox-locale-en
-      - firefox-locale-fr
-    become: true
-
-  - name: install krita
-    package: name='krita'
+  - name: install deja-dup
+    package: name='deja-dup'
     tags: ['sys', 'app']
     become: true
 
-  - name: install kazam
-    package: name='kazam'
+  # - name: install firefox
+  #   package: name='{{item}}'
+  #   tags: ['sys', 'app']
+  #   with_items:
+  #     - firefox
+  #     - firefox-locale-en
+  #     - firefox-locale-fr
+  #   become: true
+
+  - name: install empathy
+    package: name='empathy'
     tags: ['sys', 'app']
     become: true
+
+  - name: install evolution
+    package: name='evolution'
+    tags: ['sys', 'app']
+    become: true
+
+  - name: install gimp
+    package: name='gimp'
+    tags: ['sys', 'app']
+    become: true
+
+  # - name: install kazam
+  #   package: name='kazam'
+  #   tags: ['sys', 'app']
+  #   become: true
 
   - name: install keepassx
     package: name='keepassx'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install kup backup
-    package: name='kup-backup'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install kwalletcli
-    package: name='kwalletcli'
     tags: ['sys', 'app']
     become: true
 
@@ -120,8 +163,8 @@
     package: name='{{item}}'
     tags: ['sys', 'app']
     with_items:
-      - owncloud-client
-      - dolphin-owncloud
+      - libgnome-keyring0
+      - nautilus-owncloud
     become: true
 
   - name: install tlp
@@ -129,33 +172,4 @@
     tags: ['sys', 'app']
     become: true
 
-  - name: install unison
-    package: name='unison-gtk'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install vimx
-    package: name='vim-gtk3'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install vlc
-    package: name='vlc'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install xbacklight
-    package: name='xbacklight'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install xsel
-    package: name='xsel'
-    tags: ['sys', 'app']
-    become: true
-
-  - name: install yakuake
-    package: name='yakuake'
-    tags: ['sys', 'app']
-    become: true
 # }}}

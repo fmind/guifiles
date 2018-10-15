@@ -57,6 +57,21 @@
     become: true
 # }}}
 # AUTOMATION {{{
+  - name: create anacron dirs
+    file: name='{{item}}' state='directory'
+    with_items:
+      - ~/.anacron/etc
+      - ~/.anacron/spool
+    tags: ['usr', 'automation']
+
+  - name: setup anacron cron
+    cron: name='anacron' special_time='hourly' user='{{lookup("env","USER")}}' job='/usr/sbin/anacron -s -t $HOME/.anacron/etc/anacrontab -S $HOME/.anacron/spool'
+    tags: ['usr', 'automation']
+
+  - name: create anacron tab
+    copy: dest='~/.anacron/etc/anacrontab' content='SHELL=/bin/bash' force=no 
+    tags: ['usr', 'automation']
+
   - name: install autogui
     pip: name='pyautogui' executable='pip3' extra_args='--user'
     tags: ['usr', 'automation']

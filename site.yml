@@ -29,21 +29,6 @@
     package: name='chrome-gnome-shell'
     tags: ['sys', 'gnome']
     become: true
-
-  # - name: install gnome extensions
-  #   package: name='chrome-gnome-shell'
-  #   tags: ['sys', 'gnome']
-  #   with_items:
-      # gsconnect
-      # do not disturb
-      # - gnome-shell-extension-weather
-      # - gnome-shell-extension-pixelsaver
-      # - gnome-shell-extension-impactience
-      # - gnome-shell-extension-no-annoyance
-      # - gnome-shell-extension-top-icons-plus
-      # - gnome-shell-extension-system-monitor
-      # - gnome-shell-extension-tilix-dropdown
-    # become: true
 # }}}
 # CODEC {{{
   - name: install emoji fonts

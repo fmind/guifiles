@@ -1,0 +1,5 @@
+---
+
+- name: install package
+  package: name='xbacklight'
+  become: true

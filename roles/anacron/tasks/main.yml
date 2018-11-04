@@ -1,0 +1,17 @@
+---
+
+- name: create directories
+  file: name='{{item}}' state='directory'
+  with_items:
+  - ~/.anacron/etc
+  - ~/.anacron/spool
+
+- name: install package
+  package: name='anacron'
+  become: true
+
+- name: setup crontab
+  cron: name='anacron' special_time='hourly' user='{{lookup("env","USER")}}' job='/usr/sbin/anacron -s -t $HOME/.anacron/etc/anacrontab -S $HOME/.anacron/spool'
+
+- name: create table
+  copy: dest='~/.anacron/etc/anacrontab' content='SHELL=/bin/bash' force=no 

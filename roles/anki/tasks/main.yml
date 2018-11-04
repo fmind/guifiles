@@ -1,0 +1,11 @@
+---
+
+- name: install converters
+  package: name='{{item}}'
+  become: true
+  with_items:
+    - dvipng
+
+- name: install package
+  package: name='anki'
+  become: true

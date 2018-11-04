@@ -16,5 +16,5 @@
 - name: deploy scripts
   file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
   with_fileglob:
-    - 'files/*'
+    - '{{role_path}}/files/*'
   tags: ['usr']

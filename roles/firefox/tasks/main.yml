@@ -2,9 +2,11 @@
 
 - name: install package
   package: name='firefox'
+  become: true
 
 - name: install locales
   package: name='{{item}}'
   with_items:
     - firefox-locale-en
     - firefox-locale-fr
+  become: true

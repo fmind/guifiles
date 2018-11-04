@@ -2,9 +2,9 @@
 
 - name: install language
   package: name='{{item}}'
-  become: true
   with_items:
     - hunspell-fr
+  become: true
 
 - name: install tweak tool
   package: name='gnome-tweak-tool'

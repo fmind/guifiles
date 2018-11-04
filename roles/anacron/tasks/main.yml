@@ -5,6 +5,7 @@
   with_items:
   - ~/.anacron/etc
   - ~/.anacron/spool
+  tags: ['usr']
 
 - name: install package
   package: name='anacron'
@@ -12,6 +13,8 @@
 
 - name: setup crontab
   cron: name='anacron' special_time='hourly' user='{{lookup("env","USER")}}' job='/usr/sbin/anacron -s -t $HOME/.anacron/etc/anacrontab -S $HOME/.anacron/spool'
+  tags: ['usr']
 
 - name: create table
   copy: dest='~/.anacron/etc/anacrontab' content='SHELL=/bin/bash' force=no 
+  tags: ['usr']

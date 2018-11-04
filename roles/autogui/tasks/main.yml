@@ -11,8 +11,10 @@
 
 - name: install package
   pip: name='pyautogui' executable='pip3' extra_args='--user'
+  tags: ['usr']
 
 - name: deploy scripts
   file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
   with_fileglob:
     - 'files/*'
+  tags: ['usr']

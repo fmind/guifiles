@@ -3,3 +3,7 @@
 - name: install package
   package: name='emacs'
   become: true
+
+- name: deploy desktop
+  file: src='{{role_path}}/files/emacs.desktop' dest='~/.local/share/applications/emacs.desktop' state='link' force=yes
+  tags: ['usr']

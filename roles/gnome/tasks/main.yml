@@ -1,9 +1,7 @@
 ---
 
 - name: install language
-  package: name='{{item}}'
-  with_items:
-    - hunspell-fr
+  package: name='hunspell-fr'
   become: true
   tags: admin
 

@@ -3,7 +3,9 @@
 - name: install emoji fonts
   package: name='fonts-emojione'
   become: true
+  tags: admin
 
 - name: install powerline fonts
   package: name='fonts-powerline'
   become: true
+  tags: admin

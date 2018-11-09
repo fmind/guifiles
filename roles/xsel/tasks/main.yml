@@ -3,3 +3,4 @@
 - name: install package
   package: name='xsel'
   become: true
+  tags: admin

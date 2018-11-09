@@ -3,3 +3,4 @@
 - name: install package
   package: name='gimp'
   become: true
+  tags: sys

@@ -3,3 +3,4 @@
 - name: install package
   package: name='vim-gtk3'
   become: true
+  tags: admin

@@ -13,19 +13,19 @@
     tags: ['pre', 'directory']
 
   roles:
-    - {role: anacron, tags: ['anacron', 'automation', 'scheduler']}
+    - {role: anacron, tags: ['anacron', 'automation', 'schedule']}
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'automation', 'keyboard']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
     - {role: empathy, tags: ['empathy', 'application', 'communication']}
     - {role: evolution, tags: ['evolution', 'application', 'communication']}
-    - {role: firefox, tags: ['firefox', 'application', 'internet']}
-    - {role: gimp, tags: ['gimp', 'application', 'graphism']}
+    - {role: firefox, tags: ['firefox', 'application', 'browser']}
+    - {role: gimp, tags: ['gimp', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
-    - {role: owncloud, tags: ['owncloud', 'application', 'internet']}
+    - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
-    - {role: splinter, tags: ['splinter', 'automation', 'browser']}
-    - {role: xvim, tags: ['vimx', 'application', 'editor']}
+    - {role: splinter, tags: ['splinter', 'automation', 'internet']}
     - {role: xbacklight, tags: ['xbacklight', 'extension', 'light']}
-    - {role: xsel, tags: ['xsel', 'extension', 'editor']}
+    - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}
+    - {role: xvim, tags: ['xvim', 'application', 'editor']}

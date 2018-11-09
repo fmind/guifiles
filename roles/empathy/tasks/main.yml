@@ -3,3 +3,4 @@
 - name: install package
   package: name='empathy'
   become: true
+  tags: admin

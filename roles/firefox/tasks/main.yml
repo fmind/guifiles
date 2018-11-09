@@ -3,6 +3,7 @@
 - name: install package
   package: name='firefox'
   become: true
+  tags: admin
 
 - name: install locales
   package: name='{{item}}'
@@ -10,3 +11,4 @@
     - firefox-locale-en
     - firefox-locale-fr
   become: true
+  tags: admin

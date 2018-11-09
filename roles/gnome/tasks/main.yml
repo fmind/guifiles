@@ -5,11 +5,14 @@
   with_items:
     - hunspell-fr
   become: true
+  tags: admin
 
 - name: install tweak tool
   package: name='gnome-tweak-tool'
   become: true
+  tags: admin
 
 - name: install chrome shell
   package: name='chrome-gnome-shell'
   become: true
+  tags: admin

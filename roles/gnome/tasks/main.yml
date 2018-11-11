@@ -5,6 +5,12 @@
   become: true
   tags: admin
 
+- name: setup keybindings
+  shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
+  with_fileglob:
+    - '{{role_path}}/files/*'
+  tags: user
+
 - name: install tweak tool
   package: name='gnome-tweak-tool'
   become: true

@@ -1,16 +1,11 @@
 ---
 
 - name: install language
-  package: name='hunspell-fr'
+  package: name='guake'
   become: true
   tags: admin
 
-- name: install tweak tool
-  package: name='gnome-tweak-tool'
-  become: true
-  tags: admin
-
-- name: setup key bindings
+- name: setup configuration
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:
     - '{{role_path}}/files/*'

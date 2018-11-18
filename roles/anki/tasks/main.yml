@@ -1,13 +1,13 @@
 ---
 
+- name: install package
+  package: name='anki'
+  become: true
+  tags: admin
+
 - name: install converters
   package: name='{{item}}'
   with_items:
     - dvipng
-  become: true
-  tags: admin
-
-- name: install package
-  package: name='anki'
   become: true
   tags: admin

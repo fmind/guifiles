@@ -1,0 +1,25 @@
+[/]
+prompt-on-quit=false
+window-height=100
+mouse-display=false
+use-login-shell=true
+window-width=100
+max-tab-name-length=100
+window-losefocus=false
+infinite-history=false
+history-size=1000
+open-tab-cwd=true
+window-tabbar=false
+window-halignment=0
+quick-open-command-line='gedit %(file_path)s'
+compat-delete='delete-sequence'
+scroll-keystroke=true
+abbreviate-tab-names=false
+display-n=-1
+use-default-font=true
+use-trayicon=false
+use-scrollbar=false
+window-refocus=false
+set-window-title=false
+use-popup=false
+use-vte-titles=false

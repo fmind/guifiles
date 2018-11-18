@@ -19,10 +19,10 @@
   file: name='~/.config/Code/User' state='directory'
   tags: user
 
-- name: deploy snippets
-  file: src='{{role_path}}/files/snippets' dest='~/.config/Code/User/snippets' state=link force=yes
-  tags: user
-
 - name: deploy settings
   file: src='{{role_path}}/files/settings.json' dest='~/.config/Code/User/settings.json' state=link force=yes
+  tags: user
+
+- name: deploy snippets
+  file: src='{{role_path}}/files/snippets' dest='~/.config/Code/User/snippets' state=link force=yes
   tags: user

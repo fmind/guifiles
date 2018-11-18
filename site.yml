@@ -17,12 +17,13 @@
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'automation', 'keyboard']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
-    - {role: code, tags: ['code', 'application', 'editor']}
+    - {role: emacsx, tags: ['emacsx', 'application', 'editor']}
     - {role: empathy, tags: ['empathy', 'application', 'communication']}
     - {role: evolution, tags: ['evolution', 'application', 'communication']}
     - {role: firefox, tags: ['firefox', 'application', 'browser']}
     - {role: gimp, tags: ['gimp', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
+    - {role: guake, tags: ['guake', 'application', 'utility']}
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
     - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}

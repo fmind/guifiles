@@ -17,7 +17,7 @@
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'automation', 'keyboard']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
-    - {role: emacsx, tags: ['emacsx', 'application', 'editor']}
+    - {role: code, tags: ['code', 'application', 'editor']}
     - {role: empathy, tags: ['empathy', 'application', 'communication']}
     - {role: evolution, tags: ['evolution', 'application', 'communication']}
     - {role: firefox, tags: ['firefox', 'application', 'browser']}

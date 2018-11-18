@@ -15,7 +15,7 @@
   tags: user
 
 - name: deploy scripts
-  file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
+  file: src='{{item}}' dest='~/bin/{{item|basename}}' state='link' force=yes
   with_fileglob:
     - '{{role_path}}/files/*'
   tags: user

@@ -5,7 +5,7 @@
   become: true
   tags: admin
 
-- name: setup configuration
+- name: import configuration
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:
     - '{{role_path}}/files/*'

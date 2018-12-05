@@ -1,0 +1,6 @@
+---
+
+- name: install package
+  package: name='zathura'
+  become: true
+  tags: admin

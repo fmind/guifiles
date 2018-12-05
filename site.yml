@@ -28,6 +28,7 @@
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
     - {role: qutebrowser, tags: ['qutebrowser', 'application', 'browser']}
     - {role: splinter, tags: ['splinter', 'automation', 'internet']}
-    - {role: xbacklight, tags: ['xbacklight', 'extension', 'light']}
+    - {role: xbacklight, tags: ['xbacklight', 'extension', 'utility']}
     - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}
     - {role: xvim, tags: ['xvim', 'application', 'editor']}
+    - {role: zathura, tags: ['zathura', 'application', 'document']}

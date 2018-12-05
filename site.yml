@@ -26,6 +26,7 @@
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
     - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
+    - {role: qutebrowser, tags: ['qutebrowser', 'application', 'browser']}
     - {role: splinter, tags: ['splinter', 'automation', 'internet']}
     - {role: xbacklight, tags: ['xbacklight', 'extension', 'light']}
     - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}

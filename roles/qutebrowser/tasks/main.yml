@@ -5,3 +5,7 @@
   ignore_errors: true
   become: true
   tags: admin
+
+- name: deploy config
+  file: src='{{role_path}}/files/config.py' dest='~/.config/qutebrowser/config.py' state='link' force=yes
+  tags: user

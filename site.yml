@@ -13,7 +13,6 @@
     tags: ['pre', 'directory']
 
   roles:
-    - {role: anacron, tags: ['anacron', 'automation', 'schedule']}
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'automation', 'keyboard']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}

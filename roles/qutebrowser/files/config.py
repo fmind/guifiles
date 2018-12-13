@@ -10,4 +10,4 @@ c.url.searchengines = {
     "q": "https://www.qwant.com/?q={}",
 }
 
-tabs.background = True
+c.tabs.background = True

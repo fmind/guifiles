@@ -6,6 +6,9 @@
   become: true
   tags: admin
 
+- name: create directory
+  file: path='~/.config/qutebrowser/' state='directory'
+
 - name: deploy config
   file: src='{{role_path}}/files/config.py' dest='~/.config/qutebrowser/config.py' state='link' force=yes
   tags: user

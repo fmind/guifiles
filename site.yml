@@ -29,3 +29,4 @@
     - {role: xbacklight, tags: ['xbacklight', 'extension', 'utility']}
     - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}
     - {role: xvim, tags: ['xvim', 'application', 'editor']}
+    - {role: zotero, tags: ['zotero', 'application', 'science']}

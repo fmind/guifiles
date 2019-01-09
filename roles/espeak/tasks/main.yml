@@ -1,0 +1,6 @@
+---
+
+- name: install package
+  package: name='espeak-ng'
+  become: true
+  tags: admin

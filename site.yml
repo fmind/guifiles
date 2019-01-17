@@ -14,10 +14,7 @@
 
   roles:
     - {role: anki, tags: ['anki', 'application', 'education']}
-    - {role: autogui, tags: ['autogui', 'automation', 'keyboard']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
-    - {role: empathy, tags: ['empathy', 'application', 'communication']}
-    - {role: espeak, tags: ['espeak', 'extension', 'voice']}
     - {role: evolution, tags: ['evolution', 'application', 'communication']}
     - {role: firefox, tags: ['firefox', 'application', 'browser']}
     - {role: gimp, tags: ['gimp', 'application', 'graphic']}
@@ -26,7 +23,6 @@
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
     - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
-    - {role: splinter, tags: ['splinter', 'automation', 'internet']}
     - {role: xbacklight, tags: ['xbacklight', 'extension', 'utility']}
     - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}
     - {role: xvim, tags: ['xvim', 'application', 'editor']}

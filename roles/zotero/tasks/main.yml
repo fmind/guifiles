@@ -1,7 +1,7 @@
 ---
 
 - name: add repository
-  apt_repository: repo='ppa:smathot/cogscinl'
+  apt_repository: repo='ppa:smathot/cogscinl' filename='zotero'
   become: true
   tags: admin
 

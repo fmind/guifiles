@@ -15,6 +15,7 @@
   roles:
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
+    - {role: espeak, tags: ['espeak', 'extension', 'voice']}
     - {role: evolution, tags: ['evolution', 'application', 'communication']}
     - {role: firefox, tags: ['firefox', 'application', 'browser']}
     - {role: gimp, tags: ['gimp', 'application', 'graphic']}

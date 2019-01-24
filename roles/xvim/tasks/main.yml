@@ -1,6 +1,10 @@
 ---
 
 - name: install package
-  package: name='vim-gtk3'
+  package: name='vim-gnome'
   become: true
   tags: admin
+
+- name: deploy script
+  file: src='{{role_path}}/files/xvim' dest='~/bin/xvim' state='link' force=true
+  tags: user

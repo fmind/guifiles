@@ -1,3 +1,8 @@
+[custom1]
+binding='F12'
+command='xvim'
+name='XVim'
+
 [custom0]
 binding='<Super>z'
 command='xkill'

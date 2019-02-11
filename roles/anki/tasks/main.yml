@@ -5,9 +5,7 @@
   become: true
   tags: admin
 
-- name: install converters
-  package: name='{{item}}'
-  with_items:
-    - dvipng
+- name: install converter
+  package: name='dvipng'
   become: true
   tags: admin

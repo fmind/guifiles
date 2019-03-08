@@ -1,6 +1,6 @@
 ---
 
-- name: install dependencies
+- name: dependencies
   package: name='{{item}}'
   with_items:
     - python3-dev
@@ -10,11 +10,11 @@
   become: true
   tags: admin
 
-- name: install package
+- name: package
   pip: name='pyautogui' executable='pip3' extra_args='--user'
   tags: user
 
-- name: deploy scripts
+- name: scripts
   file: src='{{item}}' dest='~/bin/{{item | basename}}' state='link' force=yes
   with_fileglob:
     - '{{role_path}}/files/*'

@@ -1,11 +1,11 @@
 ---
 
-- name: install emoji fonts
+- name: emoji
   package: name='fonts-emojione'
   become: true
   tags: admin
 
-- name: install powerline fonts
+- name: powerline
   package: name='fonts-powerline'
   become: true
   tags: admin

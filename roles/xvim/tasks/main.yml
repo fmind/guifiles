@@ -1,10 +1,10 @@
 ---
 
-- name: install package
+- name: package
   package: name='vim-gnome'
   become: true
   tags: admin
 
-- name: deploy script
+- name: script
   file: src='{{role_path}}/files/xvim' dest='~/bin/xvim' state='link' force=true
   tags: user

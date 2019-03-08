@@ -1,20 +1,20 @@
 ---
 
-- name: install dependencies
+- name: dependencies
   pip: name='{{item}}' executable='pip3' extra_args='--user'
   with_items:
     - selenium
   tags: user
 
-- name: install package
+- name: package
   pip: name='splinter' executable='pip3' extra_args='--user'
   tags: user
 
-- name: install drivers
+- name: driver
   unarchive: src='https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux64.tar.gz' dest='~/bin/' remote_src=yes
   tags: user
 
-- name: deploy scripts
+- name: scripts
   file: src='{{item}}' dest='~/bin/{{item|basename}}' state='link' force=yes
   with_fileglob:
     - '{{role_path}}/files/*'

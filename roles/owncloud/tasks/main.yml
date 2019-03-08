@@ -1,11 +1,11 @@
 ---
 
-- name: install package
+- name: package
   package: name='nautilus-owncloud'
   become: true
   tags: admin
 
-- name: install keyring
+- name: keyring
   package: name='libgnome-keyring0'
   become: true
   tags: admin

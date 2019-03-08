@@ -1,6 +1,6 @@
 ---
 
-- name: install package
+- name: package
   package: name='evolution'
   become: true
   tags: admin

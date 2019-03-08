@@ -1,11 +1,11 @@
 ---
 
-- name: add repository
+- name: repository
   apt_repository: repo='ppa:smathot/cogscinl' filename='zotero'
   become: true
   tags: admin
 
-- name: install package
+- name: package
   package: name='zotero-standalone'
   become: true
   tags: admin

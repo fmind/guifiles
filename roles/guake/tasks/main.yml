@@ -1,11 +1,11 @@
 ---
 
-- name: install language
+- name: language
   package: name='guake'
   become: true
   tags: admin
 
-- name: import configuration
+- name: configs
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:
     - '{{role_path}}/files/*'

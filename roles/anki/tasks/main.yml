@@ -1,11 +1,11 @@
 ---
 
-- name: install package
+- name: package
   package: name='anki'
   become: true
   tags: admin
 
-- name: install converter
+- name: converter
   package: name='dvipng'
   become: true
   tags: admin

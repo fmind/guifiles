@@ -1,0 +1,6 @@
+---
+
+- name: install package
+  package: name='draw.io'
+  become: true
+  tags: admin

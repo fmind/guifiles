@@ -15,9 +15,7 @@
   roles:
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
-    - {role: draw.io, tags: ['draw.io', 'application', 'graphic']}
     - {role: firefox, tags: ['firefox', 'application', 'browser']}
-    - {role: gimp, tags: ['gimp', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
     - {role: guake, tags: ['guake', 'application', 'utility']}
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}

@@ -12,7 +12,7 @@
   - ~/.anacron/spool
   tags: user
 
-- name: table
+- name: config
   copy: dest='~/.anacron/etc/anacrontab' content='SHELL=/bin/bash' force=no 
   tags: user
 

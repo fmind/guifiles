@@ -3,11 +3,8 @@
 XVIM="$HOME/.xvim"
 
 touch "$XVIM"
-
 chmod 600 "$XVIM"
-
 truncate -s0 "$XVIM"
 
 gvim --nofork -c 'startinsert' "$XVIM" 
-
 cat "$XVIM" | xclip -selection clipboard

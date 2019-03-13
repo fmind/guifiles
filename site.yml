@@ -4,22 +4,26 @@
 
   pre_tasks:
 
-  - name: install python pip3
-    package: name='python3-pip'
-    tags: ['pre', 'package']
-
-  - name: create bin directory
+  - name: ~/bin/
     file: name='~/bin' state='directory'
     tags: ['pre', 'directory']
 
+  - name: python-pip3
+    package: name='python3-pip'
+    tags: ['pre', 'package']
+
   roles:
     - {role: anki, tags: ['anki', 'application', 'education']}
-    - {role: deja-dup, tags: ['deja-dup', 'application', 'backup']}
-    - {role: firefox, tags: ['firefox', 'application', 'browser']}
+    - {role: autogui, tags: ['autogui', 'desktop', 'automation']}
+    - {role: deja-dup, tags: ['deja-dup', 'application', 'security']}
+    - {role: draw.io, tags: ['draw.io', 'application', 'graphic']}
+    - {role: evolution, tags: ['evolution', 'application', 'internet']}
+    - {role: firefox, tags: ['firefox', 'application', 'internet']}
+    - {role: gimp, tags: ['gnome', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
     - {role: guake, tags: ['guake', 'application', 'utility']}
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
     - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
-    - {role: xsel, tags: ['xsel', 'extension', 'clipboard']}
+    - {role: selenium, tags: ['selenium', 'automation', 'internet']}
     - {role: xvim, tags: ['xvim', 'application', 'editor']}

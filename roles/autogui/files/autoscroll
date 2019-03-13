@@ -1,8 +1,0 @@
-#!/usr/bin/env python3
-
-import time
-import pyautogui
-
-while True:
-    time.sleep(1)
-    pyautogui.vscroll(-1)

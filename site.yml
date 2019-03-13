@@ -16,7 +16,6 @@
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'desktop', 'automation']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'security']}
-    - {role: draw.io, tags: ['draw.io', 'application', 'graphic']}
     - {role: evolution, tags: ['evolution', 'application', 'internet']}
     - {role: firefox, tags: ['firefox', 'application', 'internet']}
     - {role: gimp, tags: ['gnome', 'application', 'graphic']}

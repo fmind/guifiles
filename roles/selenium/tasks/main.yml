@@ -1,13 +1,7 @@
 ---
 
-- name: dependencies
-  pip: name='{{item}}' executable='pip3' extra_args='--user'
-  with_items:
-    - selenium
-  tags: user
-
 - name: package
-  pip: name='splinter' executable='pip3' extra_args='--user'
+  pip: name='selenium' executable='pip3' extra_args='--user'
   tags: user
 
 - name: driver

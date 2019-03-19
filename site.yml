@@ -15,14 +15,13 @@
   roles:
     - {role: anki, tags: ['anki', 'application', 'education']}
     - {role: autogui, tags: ['autogui', 'desktop', 'automation']}
+    - {role: chrome, tags: ['chrome', 'application', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'security']}
     - {role: evolution, tags: ['evolution', 'application', 'internet']}
-    - {role: firefox, tags: ['firefox', 'application', 'internet']}
     - {role: gimp, tags: ['gnome', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
     - {role: guake, tags: ['guake', 'application', 'utility']}
     - {role: keepassx, tags: ['keepassx', 'application', 'security']}
-    - {role: owncloud, tags: ['owncloud', 'application', 'utility']}
     - {role: powerfonts, tags: ['powerfonts', 'extension', 'fonts']}
     - {role: selenium, tags: ['selenium', 'automation', 'internet']}
     - {role: xvim, tags: ['xvim', 'application', 'editor']}

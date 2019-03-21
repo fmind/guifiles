@@ -17,7 +17,6 @@
     - {role: autogui, tags: ['autogui', 'desktop', 'automation']}
     - {role: chrome, tags: ['chrome', 'application', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'application', 'security']}
-    - {role: evolution, tags: ['evolution', 'application', 'internet']}
     - {role: gimp, tags: ['gnome', 'application', 'graphic']}
     - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
     - {role: guake, tags: ['guake', 'application', 'utility']}

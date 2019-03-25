@@ -6,15 +6,12 @@
 
   - name: prepare npm
     package: name='npm'
-    tags: ['pre', 'package']
 
   - name: prepare pip
     package: name='python3-pip'
-    tags: ['pre', 'package']
 
   - name: prepare bin
     file: name='~/bin' state='directory'
-    tags: ['pre', 'directory']
 
   roles:
     - {role: anki, tags: ['anki', 'education']}

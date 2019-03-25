@@ -13,6 +13,11 @@
   become: true
   tags: admin
 
+- name: clip
+  package: name='xclip'
+  become: true
+  tags: admin
+
 - name: bindings
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:

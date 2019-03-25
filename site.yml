@@ -4,22 +4,26 @@
 
   pre_tasks:
 
-  - name: ~/bin/
-    file: name='~/bin' state='directory'
-    tags: ['pre', 'directory']
+  - name: prepare npm
+    package: name='npm'
+    tags: ['pre', 'package']
 
-  - name: python-pip3
+  - name: prepare pip
     package: name='python3-pip'
     tags: ['pre', 'package']
 
+  - name: prepare bin
+    file: name='~/bin' state='directory'
+    tags: ['pre', 'directory']
+
   roles:
-    - {role: anki, tags: ['anki', 'application', 'education']}
-    - {role: autogui, tags: ['autogui', 'desktop', 'automation']}
-    - {role: chrome, tags: ['chrome', 'application', 'internet']}
-    - {role: deja-dup, tags: ['deja-dup', 'application', 'security']}
-    - {role: gnome, tags: ['gnome', 'desktop', 'environment']}
-    - {role: guake, tags: ['guake', 'application', 'utility']}
-    - {role: insync, tags: ['insync', 'extension', 'utility']}
-    - {role: keepassx, tags: ['keepassx', 'application', 'security']}
-    - {role: selenium, tags: ['selenium', 'automation', 'internet']}
-    - {role: xvim, tags: ['xvim', 'application', 'editor']}
+    - {role: anki, tags: ['anki', 'education']}
+    - {role: autogui, tags: ['autogui', 'automation']}
+    - {role: chrome, tags: ['chrome', 'internet']}
+    - {role: deja-dup, tags: ['deja-dup', 'security']}
+    - {role: gimp, tags: ['gimp', 'graphic']}
+    - {role: gnome, tags: ['gnome', 'desktop']}
+    - {role: guake, tags: ['guake', 'utility']}
+    - {role: insync, tags: ['insync', 'utility']}
+    - {role: keepassx, tags: ['keepassx', 'security']}
+    - {role: selenium, tags: ['selenium', 'automation']}

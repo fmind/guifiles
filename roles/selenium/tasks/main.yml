@@ -4,8 +4,12 @@
   pip: name='selenium' executable='pip3' extra_args='--user'
   tags: user
 
-- name: driver
-  unarchive: src='https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux64.tar.gz' dest='~/bin/' remote_src=yes
+- name: firefox
+  unarchive: src='https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz' dest='~/bin/' remote_src=yes
+  tags: user
+
+- name: chrome
+  unarchive: src='https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip' dest='~/bin/' remote_src=yes
   tags: user
 
 - name: scripts

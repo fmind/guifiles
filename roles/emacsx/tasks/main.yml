@@ -1,6 +1,0 @@
----
-
-- name: package
-  package: name='emacs'
-  become: true
-  tags: admin

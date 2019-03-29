@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=Remap Caps Lock to Control
+Exec=setxkbmap -option caps:ctrl_modifier -option shift:both_capslock
+Hidden=false
+Name=setxkbmap
+NoDisplay=false
+Type=Application
+X-GNOME-Autostart-enabled=true

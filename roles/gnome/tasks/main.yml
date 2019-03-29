@@ -18,8 +18,14 @@
   become: true
   tags: admin
 
-- name: bindings
+- name: configs
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:
-    - '{{role_path}}/files/*'
+    - '{{role_path}}/files/confs/*'
+  tags: user
+
+- name: desktops
+  file: src='{{item}}' dest='~/.config/autostart/{{item | basename}}' state='link' force=yes
+  with_fileglob:
+    - '{{role_path}}/files/desktops/*'
   tags: user

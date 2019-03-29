@@ -14,6 +14,7 @@
   roles:
     - {role: anki, tags: ['anki', 'education']}
     - {role: autogui, tags: ['autogui', 'automation']}
+    - {role: autostart, tags: ['autostart', 'automation']}
     - {role: chrome, tags: ['chrome', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
     - {role: gimp, tags: ['gimp', 'graphic']}

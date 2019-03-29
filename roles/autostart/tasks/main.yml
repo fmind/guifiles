@@ -1,0 +1,7 @@
+---
+
+- name: scripts
+  file: src='{{item}}' dest='~/.config/autostart/{{item | basename}}' state='link' force=yes
+  with_fileglob:
+    - '{{role_path}}/files/*'
+  tags: user

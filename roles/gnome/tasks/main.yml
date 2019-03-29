@@ -23,9 +23,3 @@
   with_fileglob:
     - '{{role_path}}/files/confs/*'
   tags: user
-
-- name: desktops
-  file: src='{{item}}' dest='~/.config/autostart/{{item | basename}}' state='link' force=yes
-  with_fileglob:
-    - '{{role_path}}/files/desktops/*'
-  tags: user

@@ -1,10 +1,8 @@
 [Desktop Entry]
-Type=Application
+Comment=Increase the typing speed
 Exec=xset r rate 200 50
 Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=xset
 Name=xset
-Comment[en_US]=Increase the typing speed
-Comment=Increase the typing speed
+NoDisplay=false
+Type=Application
+X-GNOME-Autostart-enabled=true

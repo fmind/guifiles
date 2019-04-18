@@ -21,5 +21,5 @@
 - name: configs
   shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
   with_fileglob:
-    - '{{role_path}}/files/confs/*'
+    - '{{role_path}}/files/*'
   tags: user

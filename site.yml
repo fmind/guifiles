@@ -12,14 +12,16 @@
     file: name='~/bin' state='directory'
 
   roles:
-    - {role: anki, tags: ['anki', 'education']}
-    - {role: autogui, tags: ['autogui', 'automation']}
-    - {role: autostart, tags: ['autostart', 'automation']}
-    - {role: chrome, tags: ['chrome', 'internet']}
-    - {role: deja-dup, tags: ['deja-dup', 'security']}
-    - {role: gimp, tags: ['gimp', 'graphic']}
-    - {role: gnome, tags: ['gnome', 'desktop']}
-    - {role: guake, tags: ['guake', 'utility']}
-    - {role: insync, tags: ['insync', 'utility']}
-    - {role: keepassx, tags: ['keepassx', 'security']}
-    - {role: selenium, tags: ['selenium', 'automation']}
+    - {role: anki, tags: ['anki']}
+    - {role: autogui, tags: ['autogui']}
+    - {role: autostart, tags: ['autostart']}
+    - {role: chrome, tags: ['chrome']}
+    - {role: common, tags: ['common']}
+    - {role: deja-dup, tags: ['deja-dup']}
+    - {role: draw.io, tags: ['draw.io']}
+    - {role: gimp, tags: ['gimp']}
+    - {role: gnome, tags: ['gnome']}
+    - {role: guake, tags: ['guake']}
+    - {role: insync, tags: ['insync']}
+    - {role: keepassx, tags: ['keepassx']}
+    - {role: selenium, tags: ['selenium']}

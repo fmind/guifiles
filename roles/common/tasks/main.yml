@@ -1,0 +1,19 @@
+---
+
+- name: lighting
+  package: name='xbacklight'
+  become: true
+  tags: admin
+
+- name: clipboard
+  package: name='xclip'
+  become: true
+  tags: admin
+
+- name: languages
+  package: name='{{item}}'
+  with_items:
+      - hunspell-en-us
+      - hunspell-fr
+  become: true
+  tags: admin

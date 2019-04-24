@@ -1,20 +1,7 @@
 ---
 
-- name: languages
-  package: name='{{item}}'
-  with_items:
-      - hunspell-fr
-      - hunspell-en-us
-  become: true
-  tags: admin
-
 - name: tweak
   package: name='gnome-tweak-tool'
-  become: true
-  tags: admin
-
-- name: clip
-  package: name='xclip'
   become: true
   tags: admin
 

@@ -1,12 +1,12 @@
 ---
 
-- name: lighting
-  package: name='xbacklight'
+- name: clipboard
+  package: name='xclip'
   become: true
   tags: admin
 
-- name: clipboard
-  package: name='xclip'
+- name: backlight
+  package: name='xbacklight'
   become: true
   tags: admin
 

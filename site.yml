@@ -18,7 +18,6 @@
     - {role: chrome, tags: ['chrome']}
     - {role: clipboard, tags: ['clipboard']}
     - {role: deja-dup, tags: ['deja-dup']}
-    - {role: draw.io, tags: ['draw.io']}
     - {role: french, tags: ['french']}
     - {role: gimp, tags: ['gimp']}
     - {role: gnome, tags: ['gnome']}

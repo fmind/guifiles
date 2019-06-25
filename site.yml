@@ -16,9 +16,10 @@
     - {role: autogui, tags: ['autogui']}
     - {role: autostart, tags: ['autostart']}
     - {role: chrome, tags: ['chrome']}
-    - {role: common, tags: ['common']}
+    - {role: clipboard, tags: ['clipboard']}
     - {role: deja-dup, tags: ['deja-dup']}
     - {role: draw.io, tags: ['draw.io']}
+    - {role: french, tags: ['french']}
     - {role: gimp, tags: ['gimp']}
     - {role: gnome, tags: ['gnome']}
     - {role: guake, tags: ['guake']}

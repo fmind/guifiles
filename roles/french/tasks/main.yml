@@ -1,0 +1,6 @@
+---
+
+- name: language
+  package: name='hunspell-fr'
+  become: true
+  tags: admin

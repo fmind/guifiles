@@ -1,5 +1,8 @@
 ---
 
+- name: directory
+  file: name='~/.config/autostart' state='directory'
+
 - name: scripts
   file: src='{{item}}' dest='~/.config/autostart/{{item | basename}}' state='link' force=yes
   with_fileglob:

@@ -13,6 +13,7 @@
 
   roles:
     - {role: anki, tags: ['anki']}
+    - {role: autogui, tags: ['autogui']}
     - {role: autostart, tags: ['autostart']}
     - {role: chrome, tags: ['chrome']}
     - {role: deja-dup, tags: ['deja-dup']}

@@ -1,7 +1,0 @@
-[insync]
-name=insync
-metadata_expire=120m
-baseurl=http://yum.insynchq.com/fedora/29/
-gpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
-gpgcheck=1
-enabled=1

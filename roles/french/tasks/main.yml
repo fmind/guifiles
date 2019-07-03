@@ -1,6 +1,10 @@
 ---
 
-- name: language
-  package: name='hunspell-fr'
+- name: languages
+  package: name='{{item}}'
+  with_items:
+    - hunspell-fr
+    - language-pack-fr
+    - language-pack-gnome-fr
   become: true
   tags: admin

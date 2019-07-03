@@ -1,6 +1,0 @@
----
-
-- name: package
-  package: name='zathura'
-  become: true
-  tags: admin

@@ -1,6 +1,0 @@
----
-
-- name: clipboard
-  package: name='xclip'
-  become: true
-  tags: admin

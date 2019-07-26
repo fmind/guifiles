@@ -17,7 +17,6 @@
     - {role: autostart, tags: ['autostart']}
     - {role: chrome, tags: ['chrome']}
     - {role: deja-dup, tags: ['deja-dup']}
-    - {role: evolution, tags: ['evolution']}
     - {role: french, tags: ['french']}
     - {role: gimp, tags: ['gimp']}
     - {role: gnome, tags: ['gnome']}

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# vim: filetype=python
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys

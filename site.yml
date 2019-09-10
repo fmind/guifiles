@@ -12,15 +12,19 @@
     file: name='~/bin' state='directory'
 
   roles:
-    - {role: anki, tags: ['anki']}
-    - {role: autogui, tags: ['autogui']}
-    - {role: autostart, tags: ['autostart']}
-    - {role: chrome, tags: ['chrome']}
-    - {role: deja-dup, tags: ['deja-dup']}
-    - {role: french, tags: ['french']}
-    - {role: gimp, tags: ['gimp']}
-    - {role: gnome, tags: ['gnome']}
-    - {role: guake, tags: ['guake']}
-    - {role: insync, tags: ['insync']}
-    - {role: keepassx, tags: ['keepassx']}
-    - {role: splinter, tags: ['splinter']}
+    # languages
+    - {role: french, tags: ['french', 'lang']}
+    # background
+    - {role: deja-dup, tags: ['deja-dup', 'serv']}
+    - {role: insync, tags: ['insync', 'serv']}
+    # automation
+    - {role: autostart, tags: ['autostart', 'auto']}
+    - {role: pyautogui, tags: ['pyautogui', 'auto']}
+    - {role: splinter, tags: ['splinter', 'auto']}
+    # applications
+    - {role: anki, tags: ['anki', 'apps']}
+    - {role: chrome, tags: ['chrome', 'apps']}
+    - {role: gimp, tags: ['gimp', 'apps']}
+    - {role: gnome, tags: ['gnome', 'apps']}
+    - {role: guake, tags: ['guake', 'apps']}
+    - {role: keepassx, tags: ['keepassx', 'apps']}

@@ -23,4 +23,4 @@
     - {role: guake, tags: ['guake']}
     - {role: insync, tags: ['insync']}
     - {role: keepassx, tags: ['keepassx']}
-    - {role: selenium, tags: ['selenium']}
+    - {role: splinter, tags: ['splinter']}

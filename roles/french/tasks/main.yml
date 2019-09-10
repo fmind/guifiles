@@ -5,6 +5,5 @@
   with_items:
     - hunspell-fr
     - language-pack-fr
-    - language-pack-gnome-fr
   become: true
   tags: admin

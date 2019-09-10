@@ -1,7 +1,11 @@
 ---
 
-- name: package
+- name: dependency
   pip: name='selenium' executable='pip3' extra_args='--user'
+  tags: user
+
+- name: package
+  pip: name='splinter' executable='pip3' extra_args='--user'
   tags: user
 
 - name: firefox

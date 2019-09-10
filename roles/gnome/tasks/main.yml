@@ -1,5 +1,10 @@
 ---
 
+- name: lang
+  package: name='language-pack-gnome-fr'
+  become: true
+  tags: admin
+
 - name: tweak
   package: name='gnome-tweak-tool'
   become: true

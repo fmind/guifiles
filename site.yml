@@ -15,8 +15,8 @@
     # languages
     - {role: french, tags: ['french', 'lang']}
     # background
-    - {role: deja-dup, tags: ['deja-dup', 'serv']}
-    - {role: insync, tags: ['insync', 'serv']}
+    - {role: deja-dup, tags: ['deja-dup', 'back']}
+    - {role: insync, tags: ['insync', 'back']}
     # automation
     - {role: autostart, tags: ['autostart', 'auto']}
     - {role: pyautogui, tags: ['pyautogui', 'auto']}
@@ -25,6 +25,7 @@
     - {role: anki, tags: ['anki', 'apps']}
     - {role: chrome, tags: ['chrome', 'apps']}
     - {role: gimp, tags: ['gimp', 'apps']}
-    - {role: gnome, tags: ['gnome', 'apps']}
     - {role: guake, tags: ['guake', 'apps']}
     - {role: keepassx, tags: ['keepassx', 'apps']}
+    # environments
+    - {role: gnome, tags: ['gnome', 'envs']}

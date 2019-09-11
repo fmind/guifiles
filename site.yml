@@ -14,13 +14,13 @@
   roles:
     # languages
     - {role: french, tags: ['french', 'lang']}
-    # background
-    - {role: deja-dup, tags: ['deja-dup', 'back']}
-    - {role: insync, tags: ['insync', 'back']}
     # automation
     - {role: autostart, tags: ['autostart', 'auto']}
     - {role: pyautogui, tags: ['pyautogui', 'auto']}
     - {role: splinter, tags: ['splinter', 'auto']}
+    # background
+    - {role: deja-dup, tags: ['deja-dup', 'back']}
+    - {role: insync, tags: ['insync', 'back']}
     # applications
     - {role: anki, tags: ['anki', 'apps']}
     - {role: chrome, tags: ['chrome', 'apps']}

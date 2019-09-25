@@ -12,20 +12,25 @@
     file: name='~/bin' state='directory'
 
   roles:
-    # languages
+    # languages {{{
     - {role: french, tags: ['french', 'lang']}
-    # automation
+    # }}}
+    # automation {{{
     - {role: autostart, tags: ['autostart', 'auto']}
     - {role: pyautogui, tags: ['pyautogui', 'auto']}
     - {role: splinter, tags: ['splinter', 'auto']}
-    # background
+    # }}}
+    # background {{{
     - {role: deja-dup, tags: ['deja-dup', 'back']}
     - {role: insync, tags: ['insync', 'back']}
-    # applications
+    # }}}
+    # applications {{{
     - {role: anki, tags: ['anki', 'apps']}
     - {role: chrome, tags: ['chrome', 'apps']}
     - {role: gimp, tags: ['gimp', 'apps']}
     - {role: guake, tags: ['guake', 'apps']}
     - {role: keepassx, tags: ['keepassx', 'apps']}
-    # environments
+    # }}}
+    # environments {{{
     - {role: gnome, tags: ['gnome', 'envs']}
+    # }}}

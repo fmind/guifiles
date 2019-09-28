@@ -30,6 +30,7 @@
     - {role: chrome, tags: ['chrome', 'apps']}
     - {role: gimp, tags: ['gimp', 'apps']}
     - {role: guake, tags: ['guake', 'apps']}
+    - {role: neovim, tags: ['neovim', 'apps']}
     - {role: keepassx, tags: ['keepassx', 'apps']}
     # }}}
     # environments {{{

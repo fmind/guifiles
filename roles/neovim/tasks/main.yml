@@ -1,0 +1,6 @@
+---
+
+- name: package
+  package: name='neovim-qt'
+  become: true
+  tags: admin

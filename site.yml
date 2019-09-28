@@ -19,7 +19,7 @@
     - {role: autostart, tags: ['autostart', 'auto']}
     - {role: pyautogui, tags: ['pyautogui', 'auto']}
     - {role: splinter, tags: ['splinter', 'auto']}
-    - {role: livesub, tags: ['liveusb', 'auto']}
+    - {role: liveusb, tags: ['liveusb', 'auto']}
     # }}}
     # background {{{
     - {role: deja-dup, tags: ['deja-dup', 'back']}

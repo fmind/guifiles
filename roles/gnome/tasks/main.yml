@@ -1,11 +1,15 @@
 ---
 
-- name: lang
-  package: name='language-pack-gnome-fr'
+- name: langs
+  package: name='{{item}}'
+  with_items:
+    - hunspell-fr
+    - language-pack-fr
+    - language-pack-gnome-fr
   become: true
   tags: admin
 
-- name: tweak
+- name: tweaks
   package: name='gnome-tweak-tool'
   become: true
   tags: admin

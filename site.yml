@@ -24,11 +24,14 @@
     # applications {{{
     - {role: anki, tags: ['anki', 'apps']}
     - {role: chrome, tags: ['chrome', 'apps']}
+    - {role: evolution, tags: ['evolution', 'apps']}
     - {role: gimp, tags: ['gimp', 'apps']}
+    - {role: gparted, tags: ['gparted', 'apps']}
     - {role: guake, tags: ['guake', 'apps']}
+    - {role: keepassx, tags: ['keepassx', 'apps']}
     - {role: liveusb, tags: ['liveusb', 'auto']}
     - {role: neovim, tags: ['neovim', 'apps']}
-    - {role: keepassx, tags: ['keepassx', 'apps']}
+    - {role: transmission, tags: ['transmission', 'apps']}
     # }}}
     # environments {{{
     - {role: gnome, tags: ['gnome', 'envs']}

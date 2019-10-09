@@ -30,7 +30,6 @@
     - {role: guake, tags: ['guake', 'apps']}
     - {role: keepassx, tags: ['keepassx', 'apps']}
     - {role: liveusb, tags: ['liveusb', 'auto']}
-    - {role: neovim, tags: ['neovim', 'apps']}
     - {role: transmission, tags: ['transmission', 'apps']}
     # }}}
     # environments {{{

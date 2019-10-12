@@ -1,0 +1,6 @@
+---
+
+- name: package
+  package: name='vlc'
+  become: true
+  tags: admin

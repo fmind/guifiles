@@ -22,16 +22,17 @@
     - {role: insync, tags: ['insync', 'back']}
     # }}}
     # applications {{{
-    - {role: anki, tags: ['anki', 'apps']}
-    - {role: chrome, tags: ['chrome', 'apps']}
-    - {role: evolution, tags: ['evolution', 'apps']}
-    - {role: gimp, tags: ['gimp', 'apps']}
-    - {role: gparted, tags: ['gparted', 'apps']}
-    - {role: guake, tags: ['guake', 'apps']}
-    - {role: keepassx, tags: ['keepassx', 'apps']}
+    - {role: anki, tags: ['anki', 'app']}
+    - {role: chrome, tags: ['chrome', 'app']}
+    - {role: evolution, tags: ['evolution', 'app']}
+    - {role: gimp, tags: ['gimp', 'app']}
+    - {role: gparted, tags: ['gparted', 'app']}
+    - {role: guake, tags: ['guake', 'app']}
+    - {role: keepassx, tags: ['keepassx', 'app']}
     - {role: liveusb, tags: ['liveusb', 'auto']}
-    - {role: transmission, tags: ['transmission', 'apps']}
+    - {role: transmission, tags: ['transmission', 'app']}
+    - {role: vlc, tags: ['vlc', 'app']}
     # }}}
     # environments {{{
-    - {role: gnome, tags: ['gnome', 'envs']}
+    - {role: gnome, tags: ['gnome', 'env']}
     # }}}

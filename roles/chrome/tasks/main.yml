@@ -1,16 +1,20 @@
 ---
 
 - name: keyring
-  apt_key: url='https://dl-ssl.google.com/linux/linux_signing_key.pub'
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
   become: true
   tags: admin
 
 - name: repository
-  apt_repository: filename='google-chrome' repo='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
+  apt_repository:
+    filename: google-chrome
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
   become: true
   tags: admin
 
 - name: package
-  package: name='google-chrome-stable'
+  package:
+    name: google-chrome-stable
   become: true
   tags: admin

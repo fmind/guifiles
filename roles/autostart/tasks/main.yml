@@ -1,10 +1,17 @@
 ---
 
 - name: directory
-  file: name='~/.config/autostart' state='directory'
+  file:
+    state: directory
+    name: ~/.config/autostart
+  tags: user
 
 - name: scripts
-  file: src='{{item}}' dest='~/.config/autostart/{{item | basename}}' state='link' force=yes
+  file:
+    force: yes
+    state: link
+    src: "{{ item }}"
+    dest: "~/.config/autostart/{{ item|basename }}"
   with_fileglob:
-    - '{{role_path}}/files/*'
+    - "{{ role_path }}/files/*"
   tags: user

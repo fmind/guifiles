@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='keepassx'
+  package:
+    name: keepassx
   become: true
   tags: admin

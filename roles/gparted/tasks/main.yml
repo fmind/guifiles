@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='gparted'
+  package:
+    name: gparted
   become: true
   tags: admin

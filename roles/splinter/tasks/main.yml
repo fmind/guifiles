@@ -1,23 +1,39 @@
 ---
 
 - name: dependency
-  pip: name='selenium' executable='pip3' extra_args='--user'
+  pip:
+    name: selenium
+    executable: pip3
+    extra_args: --user
   tags: user
 
 - name: package
-  pip: name='splinter' executable='pip3' extra_args='--user'
+  pip:
+    name: splinter
+    executable: pip3
+    extra_args: --user
   tags: user
 
 - name: firefox
-  unarchive: src='https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz' dest='~/bin/' remote_src=yes
+  unarchive:
+    dest: ~/bin/
+    remote_src: yes
+    src: https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
   tags: user
 
 - name: chrome
-  unarchive: src='https://chromedriver.storage.googleapis.com/76.0.3809.126/chromedriver_linux64.zip' dest='~/bin/' remote_src=yes
+  unarchive:
+    dest: ~/bin/
+    remote_src: yes
+    src: https://chromedriver.storage.googleapis.com/76.0.3809.126/chromedriver_linux64.zip
   tags: user
 
 - name: scripts
-  file: src='{{item}}' dest='~/bin/{{item|basename}}' state='link' force=yes
+  file:
+    force: yes
+    state: link
+    src: "{{ item }}"
+    dest: "~/bin/{{ item|basename }}"
   with_fileglob:
-    - '{{role_path}}/files/*'
+    - "{{ role_path }}/files/*"
   tags: user

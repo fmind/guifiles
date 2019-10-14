@@ -1,16 +1,21 @@
 ---
 
 - name: keyring
-  apt_key: keyserver='keyserver.ubuntu.com' id='ACCAF35C'
+  apt_key:
+    id: ACCAF35C
+    keyserver: keyserver.ubuntu.com
   become: true
   tags: admin
 
 - name: repository
-  apt_repository: filename='insync' repo='deb http://apt.insynchq.com/ubuntu bionic non-free contrib'
+  apt_repository:
+    filename: insync
+    repo: "deb http://apt.insynchq.com/ubuntu bionic non-free contrib"
   become: true
   tags: admin
 
 - name: package
-  package: name='insync'
+  package:
+    name: insync
   become: true
   tags: admin

@@ -1,21 +1,25 @@
 ---
 
 - name: langs
-  package: name='{{item}}'
-  with_items:
-    - hunspell-fr
-    - language-pack-fr
-    - language-pack-gnome-fr
+  package:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - hunspell-fr
+      - language-pack-fr
+      - language-pack-gnome-fr
   become: true
   tags: admin
 
 - name: tweaks
-  package: name='gnome-tweak-tool'
+  package:
+    name: gnome-tweak-tool
   become: true
   tags: admin
 
 - name: configs
-  shell: dconf load {{item|basename|replace("_", "/")}} < {{item}}
+  shell: dconf load "{{ item|basename|replace('_', '/') }}" < "{{ item }}"
   with_fileglob:
-    - '{{role_path}}/files/*'
+    - "{{ role_path }}/files/*"
+  when: true
   tags: user

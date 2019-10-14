@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='gimp'
+  package:
+    name: gimp
   become: true
   tags: admin

@@ -1,11 +1,13 @@
 ---
 
 - name: package
-  package: name='anki'
+  package:
+    name: anki
   become: true
   tags: admin
 
 - name: converter
-  package: name='dvipng'
+  package:
+    name: dvipng
   become: true
   tags: admin

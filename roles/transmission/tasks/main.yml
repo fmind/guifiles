@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='transmission'
+  package:
+    name: transmission
   become: true
   tags: admin

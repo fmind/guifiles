@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='deja-dup'
+  package:
+    name: deja-dup
   become: true
   tags: admin

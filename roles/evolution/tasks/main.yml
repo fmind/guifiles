@@ -1,6 +1,7 @@
 ---
 
 - name: package
-  package: name='evolution'
+  package:
+    name: evolution
   become: true
   tags: admin

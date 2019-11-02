@@ -11,6 +11,12 @@
   become: true
   tags: admin
 
+- name: fonts
+  package:
+    name: fonts-hack
+  become: true
+  tags: admin
+
 - name: tweaks
   package:
     name: gnome-tweak-tool

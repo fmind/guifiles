@@ -18,14 +18,14 @@
   unarchive:
     dest: ~/bin/
     remote_src: yes
-    src: https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+    src: https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
   tags: user
 
 - name: chrome
   unarchive:
     dest: ~/bin/
     remote_src: yes
-    src: https://chromedriver.storage.googleapis.com/76.0.3809.126/chromedriver_linux64.zip
+    src: https://chromedriver.storage.googleapis.com/78.0.3904.105/chromedriver_linux64.zip
   tags: user
 
 - name: scripts

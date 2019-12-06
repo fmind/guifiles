@@ -12,13 +12,8 @@ home=''
 help=''
 search=''
 screensaver='<Super>period'
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 magnifier=''
-
-[custom-keybindings/custom1]
-binding='F12'
-command='xvim'
-name='XVim'
 
 [custom-keybindings/custom0]
 binding='<Super>z'

@@ -4,38 +4,21 @@
 
   pre_tasks:
 
-  - name: pip
-    package:
-      name: python3-pip
-    become: true
-    tags: admin
-
   - name: ~/bin/
     file:
       name: ~/bin
       state: directory
 
   roles:
-    # automation {{{
-    - {role: autostart, tags: ['autostart', 'auto']}
-    - {role: pyautogui, tags: ['pyautogui', 'auto']}
-    - {role: splinter, tags: ['splinter', 'auto']}
-    # }}}
-    # background {{{
-    - {role: deja-dup, tags: ['deja-dup', 'back']}
-    - {role: insync, tags: ['insync', 'back']}
-    # }}}
-    # applications {{{
-    - {role: anki, tags: ['anki', 'app']}
-    - {role: chrome, tags: ['chrome', 'app']}
-    - {role: gimp, tags: ['gimp', 'app']}
-    - {role: gparted, tags: ['gparted', 'app']}
-    - {role: guake, tags: ['guake', 'app']}
-    - {role: keepassx, tags: ['keepassx', 'app']}
-    - {role: liveusb, tags: ['liveusb', 'auto']}
-    - {role: transmission, tags: ['transmission', 'app']}
-    - {role: vlc, tags: ['vlc', 'app']}
-    # }}}
-    # environments {{{
-    - {role: gnome, tags: ['gnome', 'env']}
-    # }}}
+    - {role: anki, tags: ['anki', 'education']}
+    - {role: autostart, tags: ['autostart', 'startup']}
+    - {role: chrome, tags: ['chrome', 'internet']}
+    - {role: deja-dup, tags: ['deja-dup', 'backup']}
+    - {role: gimp, tags: ['gimp', 'graphics']}
+    - {role: gnome, tags: ['gnome', 'desktop']}
+    - {role: gparted, tags: ['gparted', 'system']}
+    - {role: guake, tags: ['guake', 'desktop']}
+    - {role: insync, tags: ['insync', 'startup']}
+    - {role: keepassx, tags: ['keepassx', 'security']}
+    - {role: transmission, tags: ['transmission', 'internet']}
+    - {role: vlc, tags: ['vlc', 'multimedia']}

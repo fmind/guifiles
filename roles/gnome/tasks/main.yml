@@ -13,7 +13,7 @@
 
 - name: fonts
   package:
-    name: fonts-hack
+    name: fonts-firacode
   become: true
   tags: admin
 

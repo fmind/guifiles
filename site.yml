@@ -2,13 +2,6 @@
 
 - hosts: localhost
 
-  pre_tasks:
-
-  - name: ~/bin/
-    file:
-      name: ~/bin
-      state: directory
-
   roles:
     - {role: anki, tags: ['anki', 'education']}
     - {role: autostart, tags: ['autostart', 'startup']}

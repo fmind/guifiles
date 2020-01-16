@@ -4,14 +4,14 @@
 
   roles:
     - {role: anki, tags: ['anki', 'education']}
-    - {role: autostart, tags: ['autostart', 'startup']}
+    - {role: autostart, tags: ['autostart', 'automation']}
     - {role: chrome, tags: ['chrome', 'internet']}
-    - {role: deja-dup, tags: ['deja-dup', 'backup']}
-    - {role: gimp, tags: ['gimp', 'graphics']}
+    - {role: deja-dup, tags: ['deja-dup', 'security']}
+    - {role: gimp, tags: ['gimp', 'multimedia']}
     - {role: gnome, tags: ['gnome', 'desktop']}
     - {role: gparted, tags: ['gparted', 'system']}
     - {role: guake, tags: ['guake', 'desktop']}
-    - {role: insync, tags: ['insync', 'startup']}
+    - {role: insync, tags: ['insync', 'internet']}
     - {role: keepassx, tags: ['keepassx', 'security']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}

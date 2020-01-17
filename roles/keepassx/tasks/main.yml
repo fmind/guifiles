@@ -1,7 +1,0 @@
----
-
-- name: package
-  package:
-    name: keepassx
-  become: true
-  tags: admin

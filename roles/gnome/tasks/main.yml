@@ -1,19 +1,25 @@
 ---
 
+- name: fonts
+  package:
+    name: '{{ item }}'
+  with_items:
+    - fonts-hack
+    - fonts-firacode
+  become: true
+  tags: admin
+
 - name: langs
   package:
     name: "{{ packages }}"
   vars:
     packages:
+      - hunspell-en-us
       - hunspell-fr
+      - language-pack-en
       - language-pack-fr
+      - language-pack-gnome-en
       - language-pack-gnome-fr
-  become: true
-  tags: admin
-
-- name: fonts
-  package:
-    name: fonts-firacode
   become: true
   tags: admin
 

@@ -1,0 +1,28 @@
+---
+
+- name: directory
+  file:
+    name: ~/bin/
+    state: directory
+  tags: user
+
+- name: dependency
+  pip:
+    name: selenium
+    executable: pip3
+    extra_args: --user
+  tags: user
+
+- name: package
+  pip:
+    name: splinter
+    executable: pip3
+    extra_args: --user
+  tags: user
+
+- name: chrome
+  unarchive:
+    dest: ~/bin/
+    remote_src: yes
+    src: 'https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriver_linux64.zip'
+  tags: user

@@ -8,10 +8,11 @@
     - {role: chrome, tags: ['chrome', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
-    - {role: gnome, tags: ['gnome', 'desktop']}
+    - {role: gnome, tags: ['gnome', 'environment']}
     - {role: gparted, tags: ['gparted', 'system']}
-    - {role: guake, tags: ['guake', 'desktop']}
+    - {role: guake, tags: ['guake', 'environment']}
     - {role: insync, tags: ['insync', 'internet']}
+    - {role: pyautogui, tags: ['pyautogui', 'automation']}
+    - {role: splinter, tags: ['splinter', 'automation']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}
-    - {role: vscode, tags: ['vscode', 'development']}

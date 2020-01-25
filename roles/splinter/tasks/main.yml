@@ -20,7 +20,7 @@
     extra_args: --user
   tags: user
 
-- name: chrome
+- name: driver
   unarchive:
     dest: ~/bin/
     remote_src: yes

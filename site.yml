@@ -2,6 +2,27 @@
 
 - hosts: localhost
 
+  pre_tasks:
+
+  - name: ensure ~/bin
+    file:
+      name: ~/bin
+      state: directory
+    tags: user
+
+  - name: ensure pip3
+    package:
+      name: python3-pip
+    become: true
+    tags: admin
+
+  - name: ensure pipx
+    pip:
+      name: pipx
+      executable: pip3
+      extra_args: --user
+    tags: user
+
   roles:
     - {role: anki, tags: ['anki', 'education']}
     - {role: autostart, tags: ['autostart', 'automation']}

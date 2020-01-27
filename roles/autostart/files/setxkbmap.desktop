@@ -1,6 +1,6 @@
 [Desktop Entry]
 Comment=Remap Caps Lock to Control Left
-Exec=setxkbmap -option caps:ctrl_modifier -option shift:both_capslock
+Exec=setxkbmap -option ctrl:swapcaps
 Hidden=false
 Name=setxbkmap
 NoDisplay=false

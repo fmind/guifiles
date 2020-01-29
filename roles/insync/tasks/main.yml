@@ -10,7 +10,7 @@
 - name: repository
   apt_repository:
     filename: insync
-    repo: "deb http://apt.insynchq.com/ubuntu bionic non-free contrib"
+    repo: "deb http://apt.insync.io/ubuntu eoan non-free contrib"
   become: true
   tags: admin
 

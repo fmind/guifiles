@@ -28,6 +28,8 @@
     - {role: autostart, tags: ['autostart', 'automation']}
     - {role: chrome, tags: ['chrome', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
+    - {role: docker, tags: ['docker', 'development']}
+    - {role: emacs, tags: ['emacs', 'development']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
     - {role: gnome, tags: ['gnome', 'environment']}
     - {role: gparted, tags: ['gparted', 'system']}

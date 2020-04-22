@@ -13,8 +13,8 @@
     name: "{{ packages }}"
   vars:
     packages:
-      - hunspell-en-us
       - hunspell-fr
+      - hunspell-en-us
       - language-pack-en
       - language-pack-fr
       - language-pack-gnome-en

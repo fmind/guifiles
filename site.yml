@@ -16,13 +16,6 @@
     become: true
     tags: admin
 
-  - name: ensure pipx
-    pip:
-      name: pipx
-      executable: pip3
-      extra_args: --user
-    tags: user
-
   roles:
     - {role: anki, tags: ['anki', 'education']}
     - {role: autostart, tags: ['autostart', 'automation']}

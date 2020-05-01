@@ -1,0 +1,8 @@
+---
+
+- name: package
+  snap:
+    name: code
+    classic: yes
+  become: true
+  tags: admin

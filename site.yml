@@ -26,7 +26,7 @@
     - {role: gparted, tags: ['gparted', 'system']}
     - {role: guake, tags: ['guake', 'develop']}
     - {role: pyautogui, tags: ['pyautogui', 'automation']}
-    - {role: pycharm, tags: ['pycharm', 'develop']}
     - {role: splinter, tags: ['splinter', 'automation']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}
+    - {role: vscode, tags: ['vscode', 'develop']}

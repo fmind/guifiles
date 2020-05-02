@@ -1,6 +1,6 @@
 [Desktop Entry]
 Comment=Increase the typing speed
-Exec=xset r rate 150 50
+Exec=xset r rate 200 40
 Hidden=false
 Name=xset
 NoDisplay=false

@@ -1,0 +1,8 @@
+---
+
+- name: package
+  snap:
+    name: pycharm-professional
+    classic: yes
+  become: true
+  tags: admin

@@ -12,3 +12,10 @@
     dest: ~/.emacs.d
     repo: https://github.com/syl20bnr/spacemacs
   tags: user
+
+- name: config
+  git:
+    depth: 1
+    dest: ~/.spacemacs.d
+    repo: https://github.com/fmind/spacemacs.d
+  tags: user

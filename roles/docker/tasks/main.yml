@@ -1,8 +1,41 @@
 ---
 
+- name: keyring
+  apt_key:
+    url: https://nvidia.github.io/nvidia-docker/gpgkey
+  become: true
+  tags: admin
+
+- name: nvidia-docker
+  apt_repository:
+    filename: nvidia-docker
+    repo: "deb https://nvidia.github.io/nvidia-docker/ubuntu18.04/$(ARCH) /"
+  become: true
+  tags: admin
+
+- name: libnvidia-container
+  apt_repository:
+    filename: libnvidia-container
+    repo: "deb https://nvidia.github.io/libnvidia-container/ubuntu18.04/$(ARCH) /"
+  become: true
+  tags: admin
+
+- name: nvidia-container-runtime
+  apt_repository:
+    filename: nvidia-container-runtime
+    repo: "deb https://nvidia.github.io/nvidia-container-runtime/ubuntu18.04/$(ARCH) /"
+  become: true
+  tags: admin
+
 - name: package
   package:
     name: docker.io
+  become: true
+  tags: admin
+
+- name: nvidia-container-toolkit
+  package:
+    name: nvidia-container-toolkit
   become: true
   tags: admin
 

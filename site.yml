@@ -21,6 +21,7 @@
     - {role: autostart, tags: ['autostart', 'automation']}
     - {role: chrome, tags: ['chrome', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
+    - {role: docker, tags: ['docker', 'develop']}
     # - {role: emacs, tags: ['emacs', 'develop']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
     - {role: gnome, tags: ['gnome', 'environment']}

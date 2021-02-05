@@ -23,7 +23,7 @@
     - {role: deja-dup, tags: ['deja-dup', 'security']}
     - {role: discord, tags: ['discord', 'communication']}
     - {role: docker, tags: ['docker', 'develop']}
-    # - {role: emacs, tags: ['emacs', 'develop']}
+    - {role: emacs, tags: ['emacs', 'develop']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
     - {role: gnome, tags: ['gnome', 'environment']}
     - {role: gparted, tags: ['gparted', 'system']}

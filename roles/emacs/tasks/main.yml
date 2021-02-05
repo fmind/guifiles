@@ -2,7 +2,7 @@
 
 - name: package
   package:
-    name: emacs
+    name: emacs-gtk
   become: true
   tags: admin
 

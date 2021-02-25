@@ -16,7 +16,7 @@
 
 - name: driver
   unarchive:
-    dest: ~/Scripts/
+    dest: ~/.local/bin/
     remote_src: yes
     src: 'https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip'
   tags: user

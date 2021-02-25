@@ -4,9 +4,9 @@
 
   pre_tasks:
 
-  - name: ensure ~/Scripts
+  - name: ensure ~/.local/bin/
     file:
-      name: ~/Scripts
+      name: ~/.local/bin/
       state: directory
     tags: user
 
@@ -21,9 +21,9 @@
     - {role: autostart, tags: ['autostart', 'automation']}
     - {role: chrome, tags: ['chrome', 'internet']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
-    - {role: discord, tags: ['discord', 'communication']}
+    # - {role: discord, tags: ['discord', 'communication']}
     - {role: docker, tags: ['docker', 'develop']}
-    - {role: emacs, tags: ['emacs', 'develop']}
+    # - {role: emacs, tags: ['emacs', 'develop']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
     - {role: gnome, tags: ['gnome', 'environment']}
     - {role: gparted, tags: ['gparted', 'system']}
@@ -33,4 +33,4 @@
     - {role: splinter, tags: ['splinter', 'automation']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}
-    - {role: vscode, tags: ['vscode', 'develop']}
+    # - {role: vscode, tags: ['vscode', 'develop']}

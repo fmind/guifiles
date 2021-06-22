@@ -6,31 +6,36 @@
 
   - name: ensure ~/.local/bin/
     file:
+      mode: '0750'
       name: ~/.local/bin/
       state: directory
-    tags: user
+    tags: [pre, user, lite]
 
   - name: ensure pip3
     package:
       name: python3-pip
     become: true
-    tags: admin
+    tags: [pre, admin, lite]
 
   roles:
     - {role: anki, tags: ['anki', 'education']}
-    - {role: autostart, tags: ['autostart', 'automation']}
-    - {role: chrome, tags: ['chrome', 'internet']}
+    - {role: autostart, tags: ['autostart', 'automation', 'lite']}
+    - {role: chrome, tags: ['chrome', 'internet', 'lite']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
     # - {role: discord, tags: ['discord', 'communication']}
-    - {role: docker, tags: ['docker', 'develop']}
+    # - {role: docker, tags: ['docker', 'develop']}
     # - {role: emacs, tags: ['emacs', 'develop']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
-    - {role: gnome, tags: ['gnome', 'environment']}
+    - {role: gnome, tags: ['gnome', 'environment', 'lite']}
     - {role: gparted, tags: ['gparted', 'system']}
-    - {role: guake, tags: ['guake', 'develop']}
-    - {role: pyautogui, tags: ['pyautogui', 'automation']}
+    - {role: guake, tags: ['guake', 'develop', 'lite']}
+    # - {role: pyautogui, tags: ['pyautogui', 'automation']}
     # - {role: pycharm, tags: ['pycharm', 'develop']}
-    - {role: splinter, tags: ['splinter', 'automation']}
+    # - {role: splinter, tags: ['splinter', 'automation']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}
     # - {role: vscode, tags: ['vscode', 'develop']}
+
+  environment:
+    LANG: en_US.UTF-8
+    PATH: "{{ ansible_env.HOME }}/.local/bin/:{{ ansible_env.PATH }}"

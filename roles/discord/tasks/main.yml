@@ -1,7 +1,0 @@
----
-
-- name: package
-  snap:
-    name: discord
-  become: true
-  tags: admin

@@ -4,7 +4,7 @@
   package:
     name: '{{ item }}'
   with_items:
-    - fonts-hack
+    - fonts-firacode
   become: true
   tags: admin
 

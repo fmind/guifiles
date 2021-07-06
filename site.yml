@@ -22,19 +22,14 @@
     - {role: autostart, tags: ['autostart', 'automation', 'lite']}
     - {role: chrome, tags: ['chrome', 'internet', 'lite']}
     - {role: deja-dup, tags: ['deja-dup', 'security']}
-    # - {role: discord, tags: ['discord', 'communication']}
     # - {role: docker, tags: ['docker', 'develop']}
-    # - {role: emacs, tags: ['emacs', 'develop']}
     - {role: gimp, tags: ['gimp', 'multimedia']}
-    - {role: gnome, tags: ['gnome', 'environment', 'lite']}
+    - {role: gnome, tags: ['gnome', 'desktop', 'lite']}
     - {role: gparted, tags: ['gparted', 'system']}
     - {role: guake, tags: ['guake', 'develop', 'lite']}
-    # - {role: pyautogui, tags: ['pyautogui', 'automation']}
-    # - {role: pycharm, tags: ['pycharm', 'develop']}
-    # - {role: splinter, tags: ['splinter', 'automation']}
     - {role: transmission, tags: ['transmission', 'internet']}
     - {role: vlc, tags: ['vlc', 'multimedia']}
-    # - {role: vscode, tags: ['vscode', 'develop']}
+    - {role: vscode, tags: ['vscode', 'develop']}
 
   environment:
     LANG: en_US.UTF-8

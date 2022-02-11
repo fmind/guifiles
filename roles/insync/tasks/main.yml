@@ -1,0 +1,21 @@
+---
+
+- name: keyring
+  apt_key:
+    id: ACCAF35C
+    keyserver: keyserver.ubuntu.com
+  become: true
+  tags: admin
+
+- name: repository
+  apt_repository:
+    filename: insync
+    repo: "deb http://apt.insync.io/ubuntu {{ ansible_distribution_release }} non-free contrib"
+  become: true
+  tags: admin
+
+- name: package
+  package:
+    name: insync-nautilus
+  become: true
+  tags: admin

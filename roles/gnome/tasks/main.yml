@@ -24,7 +24,7 @@
 
 - name: tweaks
   package:
-    name: gnome-tweak-tool
+    name: gnome-tweaks
   become: true
   tags: admin
 

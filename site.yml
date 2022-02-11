@@ -2,34 +2,16 @@
 
 - hosts: localhost
 
-  pre_tasks:
-
-  - name: ensure ~/.local/bin/
-    file:
-      mode: '0750'
-      name: ~/.local/bin/
-      state: directory
-    tags: [pre, user, lite]
-
-  - name: ensure pip3
-    package:
-      name: python3-pip
-    become: true
-    tags: [pre, admin, lite]
-
   roles:
-    # - {role: anki, tags: ['anki', 'education']}
-    - {role: autostart, tags: ['autostart', 'automation', 'lite']}
-    - {role: chrome, tags: ['chrome', 'internet', 'lite']}
-    - {role: deja-dup, tags: ['deja-dup', 'security']}
-    - {role: gimp, tags: ['gimp', 'multimedia']}
-    - {role: gnome, tags: ['gnome', 'desktop', 'lite']}
-    - {role: gparted, tags: ['gparted', 'system']}
-    - {role: guake, tags: ['guake', 'develop', 'lite']}
-    - {role: transmission, tags: ['transmission', 'internet']}
-    - {role: vlc, tags: ['vlc', 'multimedia']}
-    # - {role: vscode, tags: ['vscode', 'develop']}
-
-  environment:
-    LANG: en_US.UTF-8
-    PATH: "{{ ansible_env.HOME }}/.local/bin/:{{ ansible_env.PATH }}"
+    - {role: anki, tags: ['anki', 'app']}
+    - {role: autostart, tags: ['autostart', 'desktop']}
+    - {role: chrome, tags: ['chrome', 'app']}
+    - {role: deja-dup, tags: ['deja-dup', 'app']}
+    - {role: gimp, tags: ['gimp', 'app']}
+    - {role: gnome, tags: ['gnome', 'desktop']}
+    - {role: gparted, tags: ['gparted', 'app']}
+    - {role: guake, tags: ['guake', 'desktop']}
+    - {role: insync, tags: ['insync', 'desktop']}
+    - {role: transmission, tags: ['transmission', 'app']}
+    - {role: vlc, tags: ['vlc', 'app']}
+    - {role: vscode, tags: ['vscode', 'app']}

@@ -2,8 +2,8 @@
 
 - name: keyring
   apt_key:
-    id: ACCAF35C
     keyserver: keyserver.ubuntu.com
+    id: ACCAF35C
   become: true
   tags: admin
 

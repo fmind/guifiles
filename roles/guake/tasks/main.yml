@@ -1,14 +1,11 @@
 ---
 
-- name: language
+- name: package
   package:
     name: guake
   become: true
   tags: admin
 
-- name: configs
-  shell: dconf load "{{ item|basename|replace('_', '/') }}" < "{{ item }}"
-  with_fileglob:
-    - "{{ role_path }}/files/*"
-  when: true
+- name: settings
+  shell: "dconf load /apps/guake/ < {{ role_path }}/files/settings.ini"
   tags: user

@@ -1,13 +1,15 @@
 ---
 
 - name: package
-  package:
-    name: anki
+  snap:
+    name: anki-woodrow
   become: true
   tags: admin
 
-- name: converter
+- name: converters
   package:
-    name: dvipng
+    name:
+      - dvipng
+      - dvisvgm
   become: true
   tags: admin

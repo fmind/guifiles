@@ -2,17 +2,14 @@
 
 - name: fonts
   package:
-    name: '{{ item }}'
-  with_items:
-    - fonts-firacode
+    name:
+      - fonts-firacode
   become: true
   tags: admin
 
 - name: langs
   package:
-    name: "{{ packages }}"
-  vars:
-    packages:
+    name:
       - hunspell-fr
       - hunspell-en-us
       - language-pack-en
@@ -29,8 +26,5 @@
   tags: admin
 
 - name: configs
-  shell: dconf load "{{ item|basename|replace('_', '/') }}" < "{{ item }}"
-  with_fileglob:
-    - "{{ role_path }}/files/*"
-  when: true
+  shell: "dconf load / < {{ role_path }}/files/settings.ini"
   tags: user

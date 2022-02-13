@@ -2,8 +2,8 @@
 
 - name: directory
   file:
-    state: directory
     name: ~/.config/autostart
+    state: directory
     mode: 0750
   tags: user
 

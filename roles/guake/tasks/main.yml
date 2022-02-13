@@ -8,4 +8,6 @@
 
 - name: settings
   shell: "dconf load /apps/guake/ < {{ role_path }}/files/settings.ini"
+  register: output
+  changed_when: output.rc == 0
   tags: user

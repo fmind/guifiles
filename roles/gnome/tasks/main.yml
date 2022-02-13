@@ -27,4 +27,6 @@
 
 - name: configs
   shell: "dconf load / < {{ role_path }}/files/settings.ini"
+  register: output
+  changed_when: output.rc == 0
   tags: user

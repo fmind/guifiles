@@ -4,6 +4,7 @@
   file:
     state: directory
     name: ~/.config/autostart
+    mode: 0750
   tags: user
 
 - name: scripts

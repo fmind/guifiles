@@ -9,10 +9,10 @@
 
 - name: scripts
   file:
-    force: yes
-    state: link
-    src: "{{ item }}"
     dest: "~/.config/autostart/{{ item|basename }}"
+    src: "{{ item }}"
+    state: link
+    force: yes
   with_fileglob:
     - "{{ role_path }}/files/*"
   tags: user

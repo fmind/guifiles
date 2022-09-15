@@ -6,7 +6,7 @@
     - {role: anki, tags: ['anki', 'app']}
     - {role: autostart, tags: ['autostart', 'desktop']}
     - {role: chrome, tags: ['chrome', 'app']}
-    - {role: deja-dup, tags: ['deja-dup', 'app']}
+    # - {role: deja-dup, tags: ['deja-dup', 'app']}
     - {role: gimp, tags: ['gimp', 'app']}
     - {role: gnome, tags: ['gnome', 'desktop']}
     # - {role: guake, tags: ['guake', 'desktop']}

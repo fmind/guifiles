@@ -9,7 +9,6 @@
     - {role: deja-dup, tags: ['deja-dup', 'app']}
     - {role: gimp, tags: ['gimp', 'app']}
     - {role: gnome, tags: ['gnome', 'desktop']}
-    - {role: gparted, tags: ['gparted', 'app']}
     # - {role: guake, tags: ['guake', 'desktop']}
     - {role: transmission, tags: ['transmission', 'app']}
     - {role: vlc, tags: ['vlc', 'app']}

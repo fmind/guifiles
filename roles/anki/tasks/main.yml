@@ -2,7 +2,7 @@
 
 - name: package
   snap:
-    name: anki-woodrow
+    name: anki-ppd
   become: true
   tags: admin
 

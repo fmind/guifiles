@@ -10,8 +10,7 @@
     - {role: gimp, tags: ['gimp', 'app']}
     - {role: gnome, tags: ['gnome', 'desktop']}
     - {role: gparted, tags: ['gparted', 'app']}
-    - {role: guake, tags: ['guake', 'desktop']}
-    - {role: insync, tags: ['insync', 'desktop']}
+    # - {role: guake, tags: ['guake', 'desktop']}
     - {role: transmission, tags: ['transmission', 'app']}
     - {role: vlc, tags: ['vlc', 'app']}
     - {role: vscode, tags: ['vscode', 'app']}
